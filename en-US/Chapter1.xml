@@ -23,6 +23,11 @@
             </caption>
         </mediaobject>
 		<para> For example, if you want four SNORT instances in the recommended configuration, you need a machine with 16 GB and four cores.</para>
+                <warning>
+                  <title> Warning </title>
+                  <para> It is VERY IMPORTANT that the configuration of the Manager (or cluster of managers) is performed before configuring IPS sensors. </para>
+                  <para> The Manager must be operational and in a network accessible to the sensors. Some of the sensor configuration processes depend on the access to the Manager. </para>
+                </warning>
 	</section>	
 	<section>
 		<title>Obtaining the ISO</title>
