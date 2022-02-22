@@ -20,7 +20,7 @@
 					</simplelist>
 				</revdescription>
 			</revision>
-                        <revision>
+			<revision>
 				<revnumber>0.2-0</revnumber>
 				<date>November 2021</date>
 				<author>
@@ -30,6 +30,19 @@
 				<revdescription>
 					<simplelist>
 						<member>Content update.</member>
+					</simplelist>
+				</revdescription>
+			</revision>
+			<revision>
+				<revnumber>0.3-0</revnumber>
+				<date>February 2022</date>
+				<author>
+					<firstname>Eneo Tecnología</firstname>
+					<email>spain@redborder.com</email>
+				</author>
+				<revdescription>
+					<simplelist>
+						<member>Add missing revision history.</member>
 					</simplelist>
 				</revdescription>
 			</revision>
