@@ -500,6 +500,7 @@ the system will assign by default the policies, modes and configurations assigne
             <title>Important</title>
             <para>When there is more than one group of segments, it is recommended that different processors or CPUs be assigned to each group to distribute the processes and on that way balance the load of each processor.</para>
         </important>
+    </section>
 	<section>
         <title>Conditions for creating segment groups</title>
         <itemizedlist mark="bullet">
