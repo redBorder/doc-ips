@@ -91,5 +91,385 @@
             </caption>
         </mediaobject>
 		<para>Once this page has been confirmed, the installation will carry out all of the necessary processes to prepare the system for configuration.</para>
-	</section>	
+	</section>
+		<section>
+		<title>Basic Configuration</title>
+		<para>Upon completing the installation process, you have two configuration options depending on whether or not there is a DHCP server.</para>
+		<itemizedlist mark = "bullet">
+			<listitem>
+				<para>Dynamic IP (DHCP): in this case, redBorder will have acquired an IP in its network interface.</para>
+			</listitem>
+			<listitem>
+				<para>Static IP: in this case redborder will not have any IP assigned.</para>
+			</listitem>
+		</itemizedlist>
+		<para>In both cases you will have to access the system in order to configure and register the sensor in the manager. You will access with the root user and password that was selected during installation.</para>
+		<mediaobject>
+            <imageobject>
+                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img004.png"/>
+            </imageobject>
+            <textobject>
+				<phrase>Figure 4: Basic Configuration</phrase>
+            </textobject>
+            <caption>
+                <para>Figure 4: Basic Configuration</para>
+            </caption>
+        </mediaobject>
+		<para>Once inside the system you will start the configuration manager. To do this, you will execute:</para>
+		<programlisting>[root@rbmanager ~]# rb_sysconf</programlisting>
+		<para>A menu with different options will appear:</para>
+		<mediaobject>
+            <imageobject>
+                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img005.png"/>
+            </imageobject>
+            <textobject>
+				<phrase>Figure 5: Basic Configuration</phrase>
+            </textobject>
+            <caption>
+                <para>Figure 5: Basic Configuration</para>
+            </caption>
+        </mediaobject>
+        <para>Once execute <literal>rb_sysconf</literal> you will access the <emphasis role="bold">redborder configuration menu</emphasis>.</para>
+		<para>There are 5 options:</para>
+		<orderedlist numeration="arabic">
+			<listitem>
+				<para><literal>System Configuration:</literal> here you can define and modify basic settings such as hostname, date, time, etc.</para>
+			</listitem>
+			<listitem>
+				<para><literal>Network Configuration:</literal> this is the option where you can configure the network settings.</para>
+			</listitem>
+			<listitem>
+				<para><literal>Passwords:</literal> access this option if you need to change your credentials.</para>
+			</listitem>
+			<listitem>
+				<para><literal>Update rules from Manager:</literal> select this option to force a rule update from the Manager (optional).</para>
+			</listitem>
+			<listitem>
+				<para><literal>quit:</literal> exit.</para>
+			</listitem>
+		</orderedlist>
+    </section>
+	<section>
+        <title>Network configuration</title>
+        <para>IDS/IPS sensors need to comunicate with the el Manager, to make this possible some network configuration is needed. Select option <literal>2) Network Configuration</literal> from the redborder configuration menu.</para>
+        <para>Until this setting is not made properly, the sensor will not be able to be registered in the Manager.</para>
+        <para>Those are the steps you need to follow to network configure your sensor:</para>
+        <orderedlist numeration="arabic">
+            <listitem>
+                <para>Managagement network configuration:</para>
+                <para>a) Make a bonding and assign management interface.</para>
+                <para>b) Segments configuration.</para>	
+            </listitem>
+            <listitem>
+                <para>Doman and DNS configuration</para>
+            </listitem>
+        </orderedlist>
+        <note>
+            <title>Note</title>
+            <para>The order to configure the management network can be different. The order described on this manual is considered to be the more optimal one.</para>
+        </note>
+        <warning>
+            <title>Warning</title>
+            <para>In case the system is install in a machine with multiples network interfaces, the user need to select the one that will be the management bonding.</para>
+        </warning>
+    </section>
+	<section>
+		<title>Interface asignement and bonding creation</title>
+		<para>Select <literal>Network Configuration</literal> typing option <keycap>2</keycap> y press <keycap>Enter.</keycap></para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img016.png"/>
+			</imageobject>
+		<caption>
+			<para>Automatic bypass segmenet detection</para>
+		</caption>
+		</mediaobject>
+		<para>In case the system detect <emphasis>bypass</emphasis> interfaces, the will be added automaticaly as segments.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img017.png"/>
+			</imageobject>
+			<caption>
+				<para>Network sensors configuration</para>
+			</caption>
+		</mediaobject>
+		<para>To configure the network configuration correclty:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>Bonding creation: (4 bonds max).</para>
+			</listitem>
+			<listitem>
+				<para>Selection and assigment of bonding ports.</para>
+			</listitem>
+			<listitem>
+				<para>Managmenet network interfaces selections for the bondings.</para>
+			</listitem>
+		</itemizedlist>
+		<para>The system will show a detailled list that will help the administrator to decide which ports are available to bonding creation.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img018.png"/>
+			</imageobject>
+			<textobject>
+				<phrase>Insert bonding port</phrase>
+			</textobject>
+			<caption>
+				<para>Insertar bonding port</para>
+			</caption>
+		</mediaobject>
+		<note>
+			<title>Note</title>
+			<para>To select the default parameters press: <keycap>Enter</keycap></para>
+		</note>
+    
+		<section>
+			<title>Creation of a new bonding and port assignments</title>
+			<para>To show t his process we will create a bonding (bond0) with 2 ports.</para>
+			<para>Select option <keycap>n</keycap> from the right lateral submenu.</para>
+			<para>All available ports will be shown, select the one that you want to be part of the bonding.</para>
+			<para>Introduce port number in <literal>Insert bonding first port [0]:</literal></para>
+			<para>The number between the brackets <literal>[]</literal> is the one that the system defined by default. To selectt this number press <keycap>Enter.</keycap></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img019.png"/>
+				</imageobject>
+				<textobject>
+					<phrase>Bonding creation: port assignments</phrase>
+				</textobject>
+				<caption>
+					<para>Bonding creation: port assignments</para>
+				</caption>
+			</mediaobject>
+			<para>The selected port will disappear from the list of available ports.</para>
+			<important>
+				<title>Important</title>
+				<para>The system only allows a maximum of 4 bonds: (0-3).</para>
+			</important>
+		</section>
+		<section>
+				<title>Add an extra bonding port</title>
+				<para>The sytem will ask: <literal>Insert second port (y/N)</literal></para>
+				<para>The default option is the opne with uppercase. Remember that if you dont need to add a new port you only need to press <keycap>Enter</keycap>.</para>
+				<para>In case you want to add an extra port press <keycap>y</keycap>.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img020.png"/>
+					</imageobject>
+				<textobject>
+					<phrase>Add new port to the bonding</phrase>
+				</textobject>
+				<caption>
+					<para>Add new port to the bonding</para>
+				</caption>
+				</mediaobject>
+				<para>Insert the port number <literal>Insert bonding second port [1]:</literal></para>
+				<para>The number between brackets <literal>[]</literal> is the default setting. To select this number just press <keycap>Enter</keycap>.</para>			
+		</section>
+		<section>
+			<title>Bonding network configuration</title>
+			<para>Once the assigment of the second port is made on the new bonding (bond0), the system will ask the following:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>IP Address</para>
+				</listitem>
+				<listitem>
+					<para>Network mask</para>
+				</listitem>
+				<listitem>
+					<para>Gateway</para>
+				</listitem>
+				<listitem>
+					<para>Routes</para>
+				</listitem>
+			</itemizedlist>
+			<para>If your device uses DHCP, an IP address will be assign by default. Press <keycap>Enter</keycap> to select the IP, network mask and gateway assign by the system.  In other case, enter manually those values.</para>
+			<para>The system also add default routes for the new bonding.</para>
+			<para>To insert a manual route, select option <keycap>y</keycap> in <literal>Insert a route for this bonding (y/N)?:</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img021.png"/>
+				</imageobject>
+				<caption>
+				<para>Add a manual route to the bonding</para>
+			</caption>
+			</mediaobject>
+			<para>Once this process is finish, a message will appear: <literal>Bonding 0 created successfully.</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img022.png"/>
+				</imageobject>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Finish bonding creation process</title>
+			<para>Befor apply the changes and finish the bonding creation process the system will show a table with the new bonding (bond0) next to the used ports, IP, network mask and routes.</para>	
+			<para><emphasis role="bold">Apply changes</emphasis></para>
+			<para>To save the setings, you should apply the changes selection the option <keycap>a.</keycap></para>
+			<para>You can delte in any moment the bond or bonds made selecting option <literal>delete bonding</literal> pressing the key <keycap>d.</keycap></para>
+			<para>To go back to the main menu, select option <literal>quit</literal> pressing <keycap>q.</keycap></para>
+		</section>
+	</section>
+	<section>
+		<title>Domain and DNS configuration</title>
+		<para>On the network menu configuration we can find this option <literal>DNS and domain settings.</literal> To start the process, select option<keycap>2.</keycap></para>
+		<para>In order to configure this correctly the user will need to introduce:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>Domain name</para>
+			</listitem>
+			<listitem>
+				<para>Primary DNS address</para>
+			</listitem>
+			<listitem>
+				<para>Secondary DNS address (opcional)</para>
+			</listitem>
+		</itemizedlist>
+		<para>Once the values are set, the system will show a message telling the configuration was made successfully.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img023.png"/>
+			</imageobject>
+		<caption>
+			<para>Domain and DNS configuration</para>
+		</caption>
+		</mediaobject>
+		<para>To end this process, no apply changes is needed, select option <literal>quit</literal> pressing <keycap>q</keycap> to go back to the main network menu.</para>
+	</section>
+	<section>
+		<title>Segments configuration</title>
+		<para>Select option <literal>Segment settings</literal> pressing the number <keycap>3</keycap>.</para>
+		<para>This screen will show the current number of segments, ports of each segment and if they support bypass.</para>
+		<para>On this section you will find the folling submenu:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para><keycap>f)</keycap> <literal>force bypass autoassign:</literal>to foce automaticaly bypass port assigment.</para>
+			</listitem>
+			<listitem>
+				<para><keycap>n)</keycap> <literal>new segment:</literal>selection this option to make a new segment.</para>
+			</listitem>
+			<listitem>
+				<para><keycap>d)</keycap> <literal>delete segment:</literal>to delete one segment.</para>
+			</listitem>
+			<listitem>
+				<para><keycap>q)</keycap> <literal>quit:</literal>exit.</para>
+			</listitem>
+		</itemizedlist>
+		<para>To make a new segmenet select <literal>n) new segment.</literal></para>
+		<para>This process include the following actions:</para>
+		<orderedlist numeration="arabic">
+			<listitem>
+				<para>Assigment of bypass interfaces to the segments (opcional).</para>
+			</listitem>
+			<listitem>
+				<para>Creation of one segmenet: (max 16 segments).</para>
+			</listitem>
+			<listitem>
+				<para>Select and assign ports to a segment.</para>
+			</listitem>
+		</orderedlist>
+		<para> In order to select a port, a detaill list will be shown, this will help the adminsitator to decided which ports will be use by the segments.</para>
+    
+		<section>
+			<title>Bypass interfaces selection</title>
+			<para>When the system detects bypass interfaces, it will be added automacticaly after access the network configuration menu.</para>
+			<para>There are also two extra ways assign a port:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><emphasis role="bold"> Force bypass autoassign:</emphasis> sellect option <literal>Force bypass auto assign</literal> on the segment configuration menu pressing <keycap>f</keycap>.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Manual assigment:</emphasis> select bypass ports from the list of available ports.</para>				
+				</listitem>
+			</itemizedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img024.png"/>
+				</imageobject>
+			<caption>
+				<para>Assign ports to a segment</para>
+			</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Creation of a new segment</title>
+			<para>As an example we are gonna make a segment (segment 0) and will be assign 2 ports.</para>
+			<para> To begin the process select option <keycap>n</keycap> that appears in the right submenu.</para>
+			<para>Once you have check all available ports, select the one that you wan to include in the segment.</para>
+			<para>Introduce the segment number on <literal>Insert segment number (0-15) [0]:</literal></para>
+			<para>Th number between brackets <literal>[]</literal> is the default one. To select this number just press <keycap>Enter</keycap>.</para>
+			<para>The previous assig port will disappear from the list of available ports.</para>
+			<note>
+				<title>Note</title>
+				<para>The system only allow a maximum of 16 segments (0-15).</para>
+			</note>
+		</section>
+		<section>
+			<title>Add a second port to the segment</title>
+			<para>Once assign the first port to the segment, the system will ask for a second one: <literal>Assign second port to the segment (Y/n):</literal></para>
+			<para>By default the option is the one in uppercase.</para>
+			<para>Remember if you want to assign a new port you only need to press <keycap>Enter</keycap>.</para>
+			<para>In another case just press <keycap>n</keycap>. Select an available port from the list.</para>
+			<para>Enter the number of the port on <literal>Insert segment second port [3]:</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img025.png"/>
+				</imageobject>
+			<caption>
+				<para>Assign new port to the segment</para>
+			</caption>
+			</mediaobject>
+			<para>Once the ports were assign to a segment, the system will show a message: <literal>Segment 0 created successfully.</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img026.png"/>
+				</imageobject>
+			<caption>
+				<para>Confirmation of segment creation</para>
+			</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Finish the segment creation process</title>
+			<para>Before applying the changes and finish the process, the system will show the settings:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Segments</para>
+				</listitem>
+				<listitem>
+					<para>Assigned ports</para>
+				</listitem>
+				<listitem>
+					<para>Bypass support</para>
+				</listitem>
+			</itemizedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img027.png"/>
+				</imageobject>
+			<caption>
+				<para>Assigned ports</para>
+			</caption>
+			</mediaobject>		
+			<para><emphasis role="bold">Apply changes</emphasis></para>
+			<para>To save the settings press <keycap>a.</keycap></para>
+			<para>You can delete in any moment the created segments by selection <literal>delete segment</literal>, pressing  <keycap>d</keycap>.</para>
+			<para>To go back to the main network configuration menu select <literal>quit</literal> by pressing <keycap>q</keycap>.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img028.png"/>
+				</imageobject>
+			<caption>
+				<para>Segments overview</para>
+			</caption>
+			</mediaobject>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img029.png"/>
+				</imageobject>
+			<caption>
+				<para>Apply changes to finish segment creation process</para>
+			</caption>
+			</mediaobject>		
+		</section>
+	</section>
 </chapter>		
