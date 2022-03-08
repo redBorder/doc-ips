@@ -7,10 +7,10 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>IPS/IDS parameteres sensors configuration</title>
+	<title>Editing and configuring IPS/IDS sensors</title>
 	<section>
         <title>IPS/IDS sensors configuration</title>
-        <para> You need to access the redborder Manager web interface to configure your IPS/IDS sensors.</para>
+        <para>To configure the IPS/IDS sensors, it is necessary to access the redborder web platform by inserting the management IP assigned to the Manager in the address bar of your browser.</para>
         <para><screen>https://IP-manager-address</screen></para>
         <note>
             <title>Note</title>
@@ -19,13 +19,13 @@
         </note>
         <warning>
             <title>Warning</title>
-            <para>The web will not work if you try to access using a non encrypted method (https).</para>
+            <para>The management web will not work if you try to access it through an unencrypted web.</para>
         </warning>
-        <para>There are three ways to access the IPS/IDS sensor params configuration:</para>
+        <para>There are three ways to access the edition of the IPS/IDS sensors for the configuration of their operating parameters:</para>
         <itemizedlist mark="bullet">
             <listitem>
-                <para><emphasis role="bold">Tree view:</emphasis> in the tree view users can see all the IPS/IDS created sensors next to its identify icon. 
-                Click on the sensor name or press the <literal>"Edit"</literal> to access to the sensor configuration view</para>
+                <para><emphasis role="bold">Tree view:</emphasis> in the tree view, the user can see the IPS/IDS sensors that have been created, accompanied by an identification icon. 
+                Click on the sensor name or press the <literal>"Edit"</literal> button to access to the sensor configuration view</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img037.png"/>
@@ -37,7 +37,7 @@
             </listitem>
             <listitem>
                 <para><emphasis role="bold">Access Points view:</emphasis> the Access Points view show a list of APs defined on the network. 
-                Click on one Access Point to access the configurtatio interface with general sensor parameteres. </para>
+                Click on an Access Point to access the interface configuration for general sensor parameters. </para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" align="center" width="150" fileref="images/ch03_img038.png"/>
@@ -48,8 +48,8 @@
                 </mediaobject>
             </listitem>
             <listitem>
-                <para><emphasis role="bold">IPS view:</emphasis> on the <literal>View</literal> option you can find the defailled sensor view.
-                Select <literal>IPS sensors</literal> to access to an alphabetical order IPS/IDS sensors list. Then click on the "Edit" icon.</para>
+                <para><emphasis role="bold">IPS specific view:</emphasis> on the <literal>View</literal> there are specific views for each type of sensor.
+                Select <literal>IPS sensors</literal> to access the alphabetical list of IPS sensors. Click the "Edit" icon.</para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img039.png"/>
@@ -62,16 +62,16 @@
         </itemizedlist>
     
         <section>
-            <title>Edit IPS/IDS sensor</title>
-            <para>In all these cases the user acess to a basic parameteres configuration IPS/IDS sensor view. </para>
-            <para>The formulary configuration fields can change depending if you are editing a sensor, segments group or binding.
-            This step is very important because this configuration will change the way the sensor works depending on differente scenarios. 
-            This options are defined in the section <emphasis role="bold">IPS/IDS configuration.</emphasis></para>
-            <para>This is a list of the options you can modify on a IPS/IDS edit view:</para>
+            <title>Edit IPS/IDS sensor settings</title>
+            <para>In all the cases described, the user accesses to a basic parameters configuration view. </para>
+            <para>The configuration form fields vary depending on whether you are editing a sensor, group of segments or binding.
+            This step is very important since one configuration or another will determine the sensor's operating mode depending on whether it is installed in one scenario or another. 
+            These options are defined in the section <emphasis role="bold">IPS/IDS configuration.</emphasis></para>
+            <para>The fields displayed on the IPS sensor configuration form are listed below:</para>
             <itemizedlist mark="bullet">
                 <listitem>
-                    <para>General: show general sensor information. The only option you can edit on this section is the description.
-                    <footnote><para>IP address and sensor name were defined during the installation and registration process.</para></footnote></para>
+                    <para>General: displays general sensor information. The only editable information in this section is the description.
+                    <footnote><para>Both the IP and the name of the sensor have been defined during the process of installing and registering the sensors in the Manager.</para></footnote></para>
                 </listitem>
                 <listitem>
                     <para>IPS/IDS Settings</para>

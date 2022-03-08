@@ -7,16 +7,17 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Registering the redBorder Enterprise Edition IPS</title>
+	<title>Registering the IPS/IDS sensor</title>
 	<section>
-		<title>Manager sensor registration</title>
-		<para>To finish the installation process of the IPS/IDS sensors the last step consist in <emphasis role="bold">Manager sensors registration.</emphasis></para>
+		<title>Registration of the sensor in the Manager</title>
+		<para>To finish the installation process of the IPS/IDS sensor, the last step consist in <emphasis role="bold">Manager sensors registration.</emphasis></para>
+        <para>Until the registration is complete, a message will be displayed indicating that the sensors have not yet been registered in the Manager.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img030.png"/>
 			</imageobject>
 			<caption>
-				<para>Start of sensor registation process</para>
+				<para>Starting sensor registration to the Manager</para>
 			</caption>
 	    </mediaobject>	
 		<para>In the sensor registration menu we can find the following options:</para>
@@ -37,35 +38,35 @@
     
         <section>
             <title>Assign sensor name (Hostname)</title>
-            <para> Select the option <literal>Hostname [rbsensor]</literal> from the registration menu pressing <keycap>1</keycap>.</para>
-            <para> Next, on the line <literal>Insert Hostname [rbsensor]:</literal> type the name you which for your sensor. This name will be appear in the the web on the sensor list.</para>
+            <para> Select the option <literal>Hostname [rbsensor]</literal> from the registration menu by pressing <keycap>1</keycap>.</para>
+            <para> Next, on the line <literal>Insert Hostname [rbsensor]:</literal> type the name you want to give to the sensor. From now on, this is the name that will be displayed on the web when you access to the list of IPS sensors.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img031.png"/>
                 </imageobject>
             <caption>
-                <para>Assign sensor name</para>
+                <para>Assign a sensor name</para>
             </caption>
             </mediaobject>
             <note>
                 <title>Note</title>
-                <para>Remember to use a good name and avoid generic names like “Sensor”.</para>
+                <para>Remember to enter a consistent name for the sensor. Avoid using the name “Sensor”, as this is the generic name used by the Manager and could cause confusion in the long run.</para>
             </note>
             <warning>
                 <title>Warning</title>
-                <para>The system will ask you to  verify the sensor name, in that case press <keycap>Enter</keycap></para>
-                <para>If you want to make a modification press <keycap>n</keycap></para>
-                <para>The system will change the sensor name. To continue and go back the to the main systm menu press any key  <literal>Press a key to continue...</literal></para>
+                <para>The system will ask you to verify that the chosen name is correct, in this case, press <keycap>Enter</keycap></para>
+                <para>If you wish to modify it, insert the letter <keycap>n</keycap></para>
+                <para>The system will proceed to change the name of the sensor. To continue, and return to the redborder system configuration menu, press any key as indicated <literal>Press a key to continue...</literal></para>
             </warning>	
         </section>		
         <section>
             <title>Local time configuration</title>
             <para>Select option <literal>2) Set local time.</literal></para>
             <para>Insert date and time of your country. </para>
-            <para> The system will show the support format:</para>
+            <para>The system indicates two possible formats for inserting the date and time:</para>
             <itemizedlist mark="bullet">
                 <listitem>
-                    <para><literal>[HH:mm]</literal> ó <literal>[YYYY/MM/DD]</literal></para>
+                    <para><literal>[HH:mm]</literal> or <literal>[YYYY/MM/DD]</literal></para>
                 </listitem>
                 <listitem>
                     <para><literal> [YYYY/MM/DD HH:mm]</literal></para>
@@ -82,37 +83,37 @@
             </mediaobject>
         </section>
         <section>
-            <title>Introduce Master Manager IP</title>
+            <title>Introduce the Master Manager IP</title>
             <para>Select option <literal>3) IP adress for rB Master Manager [.*].</literal></para>
-            <para>Type the IP address or domain name of the Manager. The system will check if the Manager can be reached. This process may take a few seconds.</para>
-            <para>The system will sincronize the time of the machines and then it will reboot some time related services.</para>
-            <para> Congratulations! Your machine is ready to make the registration with the Manager.</para>
+            <para>Insert the IP address or domain name of the computer used by the user. The system will perform a series of checks to verify if it is reachable. This process may take a few seconds.</para>
+            <para>The system will synchronize the time of the computers and then restart a couple of services in order to finish the time synchronization.</para>
+            <para> Congratulations! Your machine is ready to register the sensor in the Manager.</para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img033.png"/>
                 </imageobject>
                 <caption>
-                <para>Introduce Master Manager IP</para>
+                <para>Insert Master Manager IP</para>
             </caption>
             </mediaobject>
-            <para>To continue and go back to the system configuration menu press any key <literal>Press a key to continue...</literal></para>
+            <para>To continue, and return to the redborder system configuration menu, press any key as indicated <literal>Press a key to continue...</literal></para>
         </section>
         <section>
-            <title>Sensor registration</title>
+            <title>Registration of the sensors in the Manager</title>
             <para>This is the last step to configure your redborder IPS/IDS sensor.</para>
-            <para> From now on you will be able to manage your IPS/IDS sensor from the main application and visualize in a graphic way all the generated events using dashboards. </para>
-            <para>With this application you will be able to create reports, visualize events and configure some rules to take actions. </para>
-            <para><emphasis>Finish registration process in the Manager</emphasis></para>
-            <para> To complete the registration process follow these steps:</para>
+            <para>From this moment on, you will be able to work directly from the IPS management application, in whose dashboard you will graphically view all the traffic events captured by the IPS sensors.</para>
+            <para>In this application you can create reports, view events or configure the rules of the Manager among other actions.</para>
+            <para><emphasis>Completing the sensor registration process in the Manager</emphasis></para>
+            <para>The steps to follow to complete the sensor registration process in the Manager are as follows:</para>
             <orderedlist numeration="arabic">
                 <listitem>
-                    <para>Show debug output: the system will ask <literal>Would you like to have a debug output?</literal> Select default option (No) pressing the key <keycap>N</keycap>.</para>
+                    <para>Indicate if you want to have a debugging output: the system will ask the following question <literal>Would you like to have a debug output?</literal> Select default option (No) pressing the key <keycap>N</keycap>.</para>
                 </listitem>
                 <listitem>
-                    <para><emphasis role="bold">Insert password:</emphasis> type the password that you use in the Manager basic configuration phase.</para>
+                    <para><emphasis role="bold">Insert password:</emphasis> indicate the password that has been entered in the basic settings phase for the configuration of the Manager.</para>
                 </listitem>
                 <listitem>
-                    <para><emphasis role="bold">Temporal syncronization (automaticaly) between the Manager and its sensors:</emphasis> this process may take some seconds.</para>
+                    <para><emphasis role="bold">Time synchronization (automatic) between the Manager and the sensors: </emphasis> this process may take a few seconds to complete.</para>
                 </listitem>
                 </orderedlist>
                 <mediaobject>
@@ -120,34 +121,34 @@
                     <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img034.png"/>
                 </imageobject>
             <caption>
-                <para>Finish sensor registration process</para>
+                <para>Completing the registration of the sensors in the Manager</para>
             </caption>
             </mediaobject>
-                <para>After these steps the system will show a successfully registation message.</para>
+                <para>After completing these steps, the system will notify you with a message that the sensor has been successfully registered.</para>
                 <para><literal>Sensor registered succesfully with chef server</literal></para>
                 <mediaobject>
                     <imageobject>
                         <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img035.png"/>
                     </imageobject>
                 <caption>
-                    <para>Sensor registrastion into the server</para>
+                    <para>Sensor registration on the server</para>
                 </caption>
             </mediaobject>
             <warning>
                 <title>Warning</title>
-                <para>Do not change the sensor name or <emphasis>hostname</emphasis> once is registered. If you want to make those changes you will need to undo the registration process and start over.</para>
+                <para>Do not change the sensor name or <emphasis>hostname</emphasis> once it has been registered. If you want to make changes, you will need to undo the entire registration process and start over.</para>
             </warning>
-            <para>To continue and go back to the system configuration menu press any key <literal>Press a key to continue...</literal></para>
-            <para>In the sensor registration menu you can verify that the sensor was register successfully:<literal>(Registered).</literal></para>
+            <para>To continue and return to the redborder system configuration menu, press any key as indicated <literal>Press a key to continue...</literal></para>
+            <para>In the sensor registration menu in the redborder Manager you can check that the sensor has been successfully registered:<literal>(Registered).</literal></para>
             <mediaobject>
                 <imageobject>
                     <imagedata scalefit="1" align="center" width="450" fileref="images/ch02_img036.png"/>
                 </imageobject>
                 <caption>
-                    <para>Successful sensor registration</para>
+                    <para>Sensor registration successful</para>
                 </caption>
             </mediaobject>
-            <para> To exit, select option <literal>quit</literal> pressing <keycap>q.</keycap></para>				
+            <para> To exit the sensor registration wizard, select option <literal>quit</literal> pressing <keycap>q.</keycap></para>				
         </section>
     </section>
 </chapter>		
