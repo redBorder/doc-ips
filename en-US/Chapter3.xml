@@ -205,8 +205,7 @@
                 </listitem>
             </itemizedlist>
             <para><literal>Bypass controlled by Snort</literal></para>
-            <para>When the machine starts Snort can automatically take control of the bypasses.
-            This action may cause unwanted firewall flapping to prevent Snort from being enabled for bypass control.</para>
+            <para>When the machine starts Snort can automatically take control of the bypasses. This action will allow the system to switch off the bypass after a boot process.</para>
             <para><literal>Threshold Count</literal></para>
             <para>Maximum number of occurrences in a given time range for an event to be sent.</para>
             <para><literal>Threshold Seconds</literal></para>
