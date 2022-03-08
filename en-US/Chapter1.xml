@@ -510,7 +510,7 @@
 			</mediaobject>
 			<note>
 				<title>Note</title>
-				<para>Remember to introduce a good name. Avoid to use generic names like “Sensor”.</para>
+				<para>Remember to use a good name and avoid generic names like “Sensor”.</para>
 			</note>
 			<warning>
 				<title>Warning</title>
@@ -521,9 +521,9 @@
 		</section>		
 		<section>
 			<title>Local time configuration</title>
-			<para>Seleccionar la opción <literal>2) Set local time.</literal></para>
-			<para>Insertar fecha y hora de la franja horaria correspondiente al país en el que se encuentre. Esta debería coincidir con la seleccionada en la fase de ajustes básicos durante el proceso de configuración de los sensores IPS. </para>
-			<para> El sistema le indica dos formatos posibles para la inserción de la fecha y la hora:</para>
+			<para>Select option <literal>2) Set local time.</literal></para>
+			<para>Insert date and time of your country. </para>
+			<para> The system will show the support format:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para><literal>[HH:mm]</literal> ó <literal>[YYYY/MM/DD]</literal></para>
@@ -532,318 +532,318 @@
 					<para><literal> [YYYY/MM/DD HH:mm]</literal></para>
 				</listitem>
 			</itemizedlist>
-			<para>Pulsar <keycap>Enter</keycap> para continuar con el proceso de registro.</para>
+			<para>Press <keycap>Enter</keycap> to continue with the registration process.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img024.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img032.png"/>
 			    </imageobject>
 			   <caption>
-				<para>Registro de los sensores en el Manager: Selección hora local</para>
+				<para>Sensor registration in the Manager: Select local time</para>
 			</caption>
 		    </mediaobject>
 		</section>
 		<section>
-			<title>Introducir la IP del Master Manager</title>
-			<para>Seleccionar la opción <literal>3) IP adress for rB Master Manager [.*].</literal></para>
-			<para>Insertar la dirección IP o nombre de dominio del equipo utilizado por el usuario. El sistema realizará una serie de comprobaciones para verificar si es alcanzable. Este proceso puede llevar unos segundos.</para>
-			<para>El sistema sincronizará la hora de los equipos y a continuación, reiniciará un par de servicios con el objetivo de finalizar la sincronía horaria.</para>
-			<para> ¡Enhorabuena! Su equipo está preparado para realizar el registro de los sensores en el Manager.</para>
+			<title>Introduce Master Manager IP</title>
+			<para>Select option <literal>3) IP adress for rB Master Manager [.*].</literal></para>
+			<para>Type the IP address or domain name of the Manager. The system will check if the Manager can be reached. This process may take a few seconds.</para>
+			<para>The system will sincronize the time of the machines and then it will reboot some time related services.</para>
+			<para> Congratulations! Your machine is ready to make the registration with the Manager.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img025.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img033.png"/>
 			    </imageobject>
 			   <caption>
-				<para>Insertar IP master Manager</para>
+				<para>Introduce Master Manager IP</para>
 			</caption>
 		    </mediaobject>
-		    <para>Para continuar, y regeresar al menú de configuración del sistema redborder, pulse cualquier tecla tal y como se indica <literal>Press a key to continue...</literal></para>
+		    <para>To continue and go back to the system configuration menu press any key <literal>Press a key to continue...</literal></para>
 		</section>
 		<section>
-			<title>Registro de los sensores en el Manager</title>
-			<para>Este es el último paso que da por finalizado el proceso de implantación de la solución redborder IPS.</para>
-			<para> A partir de este momento, usted podrá trabajar directamente desde la aplicación de gestión IPS, en cuyo dashboard visualizará de manera gráfica todos los eventos de tráfico captados por los sensores IPS. </para>
-			<para>En esta aplicación podrá crear informes, visualizar los eventos o configurar las reglas del Manager entre otras acciones. </para>
-			<para><emphasis>Finalización del proceso del registro de los sensores en el Manager</emphasis></para>
-			<para> Los pasos que se van a seguir para completar el proceso de registro de los sensores en el Manager son los siguientes:</para>
+			<title>Sensor registration</title>
+			<para>This is the last step to configure your redborder IPS/IDS sensor.</para>
+			<para> From now on you will be able to manage your IPS/IDS sensor from the main application and visualize in a graphic way all the generated events using dashboards. </para>
+			<para>With this application you will be able to create reports, visualize events and configure some rules to take actions. </para>
+			<para><emphasis>Finish registration process in the Manager</emphasis></para>
+			<para> To complete the registration process follow these steps:</para>
 			<orderedlist numeration="arabic">
 				<listitem>
-					<para> Indicar si se desea tener una salida de depuración: el sistema formulará la siguiente pregunta <literal>Would you like to have a debug output?</literal> Seleccionar la opción predeterminada (No) insertando la letra <keycap>N</keycap>.</para>
+					<para>Show debug output: the system will ask <literal>Would you like to have a debug output?</literal> Select default option (No) pressing the key <keycap>N</keycap>.</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">Insertar password:</emphasis> indicar la clave que se ha introducido en la fase de ajustes básicos para la configuración del Manager.</para>
+					<para><emphasis role="bold">Insert password:</emphasis> type the password that you use in the Manager basic configuration phase.</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold"> Sincronización temporal (automático) entre el Manager y los sensores:</emphasis> este proceso puede llevar unos segundos en completarse.</para>
+					<para><emphasis role="bold">Temporal syncronization (automaticaly) between the Manager and its sensors:</emphasis> this process may take some seconds.</para>
 		        </listitem>
 		     </orderedlist>
 		     <mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img026.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img034.png"/>
 				</imageobject>
 			<caption>
-				<para>Finalización del registro de los sensores en el Manager</para>
+				<para>Finish sensor registration process</para>
 			</caption>
 			</mediaobject>
-				<para>Tras la realización de estos pasos, el sistema le avisará con un mensaje de que el sensor ha sido registrado con éxito.</para>
-				<para><literal> Sensor registered succesfully with chef server</literal></para>
+				<para>After these steps the system will show a successfully registation message.</para>
+				<para><literal>Sensor registered succesfully with chef server</literal></para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img028.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img035.png"/>
 			        </imageobject>
 			    <caption>
-					<para>Registro del sensor en el servidor</para>
+					<para>Sensor registrastion into the server</para>
 				</caption>
 		    </mediaobject>
 			<warning>
-				<title>Advertencia</title>
-				<para>No cambiar el nombre del sensor o <emphasis>hostname</emphasis> una vez que ha sido registrado. Si desea realizar cambios, será necesario deshacer todo el proceso de registro y comenzarlo de nuevo.</para>
+				<title>Warning</title>
+				<para>Do not change the sensor name or <emphasis>hostname</emphasis> once is registered. If you want to make those changes you will need to undo the registration process and start over.</para>
 			</warning>
-			<para>Para continuar y regresar al menú de configuración del sistema redborder, pulse cualquier tecla tal y como se indica <literal>Press a key to continue...</literal></para>
-			<para>En él menú de registro de los sensores en el Manager redborder puede comprobar que el sensor ha sido registrado con éxito:<literal>(Registered).</literal></para>
+			<para>To continue and go back to the system configuration menu press any key <literal>Press a key to continue...</literal></para>
+			<para>In the sensor registration menu you can verify that the sensor was register successfully:<literal>(Registered).</literal></para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img029.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img036.png"/>
 			    </imageobject>
 			    <caption>
-					<para>Registro del sensor realizado con éxito</para>
+					<para>Successful sensor registration</para>
 				</caption>
 		    </mediaobject>
-		    <para> Para salir del asistente de registro de los sensores en el Manager, seleccione la opción <literal>quit</literal> introduciendo la letra <keycap>q.</keycap></para>				
+		    <para> To exit, select option <literal>quit</literal> pressing <keycap>q.</keycap></para>				
 		</section>
 	</section>
 	<section>
-	<title>Edición y configuración de los sensores IPS/IDS</title>
-	<para> Para realizar la configuración de los sensores IPS/IDS es necesario acceder a la plataforma web de redborder insertando la IP de gestión asignada al Manager en la barra de direcciones de su navegador.</para>
-	<para><screen>https://direccion-IP-manager</screen></para>
+	<title>IPS/IDS sensors configuration</title>
+	<para> You need to access the redborder Manager web interface to configure your IPS/IDS sensors.</para>
+	<para><screen>https://IP-manager-address</screen></para>
 	<note>
-		<title>Nota</title>
-		<para>Es posible iniciar sesión en la plataforma usando la cuenta definida por defecto: <emphasis role="bold">admin o admin@redborder.com</emphasis>
-		 y con la contraseña que haya insertado en el proceso de instalación del Manager.</para>
+		<title>Note</title>
+		<para>It is possible to log in to the platform using the default account: <emphasis role="bold">admin or admin@redborder.com</emphasis>
+		 with the password used during the Manager installation process.</para>
 	</note>
 	<warning>
-		<title>Advertencia</title>
-		<para>La web de gestión no funcionará si se intenta acceder a ella mediante web no cifrada.</para>
+		<title>Warning</title>
+		<para>The web will not work if you try to access using a non encrypted method (https).</para>
 	</warning>
-	<para>Existen tres modos de acceder a la edición de los sensores IPS/IDS para la configuración de sus parámetros de funcionamiento:</para>
+	<para>There are three ways to access the IPS/IDS sensor params configuration:</para>
 	<itemizedlist mark="bullet">
 		<listitem>
-			<para><emphasis role="bold">Vista árbol:</emphasis> en la vista árbol el usuario puede ver los sensores IPS/IDS que se han creado acompañados de un icono identificativo. 
-			Para acceder a su edición hacer clic sobre el nombre del sensor o bien, en el icono "Editar" -> <literal>"Edit"</literal></para>
+			<para><emphasis role="bold">Tree view:</emphasis> in the tree view users can see all the IPS/IDS created sensors next to its identify icon. 
+			Click on the sensor name or press the <literal>"Edit"</literal> to access to the sensor configuration view</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img030.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img037.png"/>
 				</imageobject>
 				<caption>
-					<para>Vista árbol: editar sensor IPS/IDS</para>
+					<para>Tree view: edit IPS/IDS sensor</para>
 				</caption>
 			</mediaobject>
 		</listitem>
 		<listitem>
-			<para><emphasis role="bold">Vista Access Points:</emphasis> la vista de Access Points muestra un listado con los puntos de acceso a la red que se han definido. 
-			Haciendo clic sobre un Access Point se accede a la interfaz de configuración de los parámetros generales del sensor. </para>
+			<para><emphasis role="bold">Access Points view:</emphasis> the Access Points view show a list of APs defined on the network. 
+			Click on one Access Point to access the configurtatio interface with general sensor parameteres. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="150" fileref="images/ch04_img031.png"/>
+					<imagedata scalefit="1" align="center" width="150" fileref="images/ch01_img038.png"/>
 				</imageobject>
 				<caption>
-					<para>Vista Access Points: editar sensor IPS/IDS</para>
+					<para>Access Points view: edit IPS/IDS sensor</para>
 				</caption>
 			</mediaobject>
 		</listitem>
 		<listitem>
-			<para><emphasis role="bold">Vista específica de IPS:</emphasis> en la opción <literal>View</literal> se encuentran vistas específicas para cada tipo de sensor.
-			Seleccionar <literal>IPS sensors</literal> para acceder al listado alfabético de los sensores IPS. Hacer clic en el icono "Editar".</para>
+			<para><emphasis role="bold">IPS view:</emphasis> on the <literal>View</literal> option you can find the defailled sensor view.
+			Select <literal>IPS sensors</literal> to access to an alphabetical order IPS/IDS sensors list. Then click on the "Edit" icon.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img032.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img039.png"/>
 				</imageobject>
 				<caption>
-					<para>Vista IPS Sensors: IPS/IDS</para>
+					<para>IPS Sensors view: IPS/IDS</para>
 				</caption>
 			</mediaobject>
 		</listitem>
 	</itemizedlist>
 		<section>
-		<title>Editar la configuración del sensor IPS/IDS</title>
-			<para>En todos los casos descritos el usuario accede a una pantalla en la que puede realizar la configuración de los parámetros básicos de los sensores IPS/IDS. </para>
-			<para>Los campos del formulario de configuración varían según se esté editando un sensor, grupo de segmentos o binding.
-			Este paso es muy importante puesto que una configuración u otra determinará el modo de funcionamiento del sensor según se instale en un escenario u otro (IPS o Malware). 
-			Estas opciones se definen en el apartado <emphasis role="bold">Configuración IPS/IDS.</emphasis></para>
-			<para>A continuación se enumeran los campos que se muestran en el formulario de configuración de un sensor IPS:</para>
+		<title>Edit IPS/IDS sensor</title>
+			<para>In all these cases the user acess to a basic parameteres configuration IPS/IDS sensor view. </para>
+			<para>The formulary configuration fields can change depending if you are editing a sensor, segments group or binding.
+			This step is very important because this configuration will change the way the sensor works depending on differente scenarios. 
+			This options are defined in the section <emphasis role="bold">IPS/IDS configuration.</emphasis></para>
+			<para>This is a list of the options you can modify on a IPS/IDS edit view:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para>General: muestra información general del sensor. La única información editable en este apartado es la descripción. 
-					<footnote><para>Tanto la IP como el nombre del sensor han sido definidos durante el proceso de instalación y registro de los sensores en el Manager.</para></footnote></para>
+					<para>General: show general sensor information. The only option you can edit on this section is the description.
+					<footnote><para>IP address and sensor name were defined during the installation and registration process.</para></footnote></para>
 				</listitem>
 				<listitem>
-					<para>Configuración IPS/IDS (IPS/IDS Settings)</para>
+					<para>IPS/IDS Settings</para>
 				</listitem>
 				<listitem>
-					<para>Servidores (Servers)</para>
+					<para>Servers</para>
 				</listitem>
 				<listitem>
 					<para>Trap servers</para>
 				</listitem>
 				<listitem>
-					<para>Segmentos (Segments)</para>
+					<para>Segments</para>
 				</listitem>
 				<listitem>
 					<para>Network routes</para>
 				</listitem>
 				<listitem>
-					<para>Localización (Location)</para>
+					<para>Location</para>
 				</listitem>
 				<listitem>
 					<para>IP Variables</para>
 				</listitem>
 				<listitem>
-					<para>Variables de puertos (Port variables)</para>
+					<para>Port variables</para>
 				</listitem>
 				<listitem>
-					<para>Grupos (Groups)</para>
+					<para>Groups</para>
 				</listitem>
 			</itemizedlist>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img033.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img039.png"/>
 				</imageobject>
 				<caption>
-					<para>Información editable para la configuración de los sensores IDS/IPS</para>
+					<para>Editable information for IDS/IPS sensor configuration</para>
 				</caption>
 			</mediaobject>
-			<para>En el margen superior derecho de la pantalla encontramos las siguientes opciones:</para> 
+			<para>In the upper right corner of the screen we find the following options:</para> 
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para><literal>Stop Auto-apply</literal></para>
-					<para>Este botón evita que Chef aplique de manera automática los cambios (que refresca y aplica cada 5 minutos).</para>
-					<para>El sistema abrirá una ventana de confirmación para asegurarse de que esta es la acción que desea realizar el usuario.</para>
+					<para>This button prevents Chef from automatically applying the changes (it refreshes and applies every 5 minutes).</para>
+					<para>The system will open a confirmation window to make sure that this is the action the user wants to perform.</para>
 				</listitem>
 				<listitem>
 					<para><literal>Options-> Recreate Private Key</literal></para>
-					<para>Esta opción regenera la clave privada de sincronización del sensor IPS con el Manager. Si tiene rol de Administrador en redborder, 
-					encontrará también esta opción en la interfaz de edición de usuarios en <literal>Tools -> Users</literal>.</para>
-					<para>Una vez que se haya confirmado dicha restauración, el usuario deberá introducir el texto que se le muestra en la ventana modal en el IPS siguiendo la siguiente ruta: 
+					<para>This option regenerates the synchronization private key of the IPS sensor with the Manager. If you have Administrator role in redborder,
+You will also find this option in the user editing interface in <literal>Tools -> Users</literal>.</para>
+					<para>Once said restoration has been confirmed, the user must enter the text that is shown in the modal window in the IPS following the following path:: 
 					<computeroutput>/etc/chef/client.pem</computeroutput></para>
 				</listitem>
 			</itemizedlist>
 			<warning>
-				<title>Advertencia</title>
-				<para><emphasis role="bold">La acción de restauración de la clave privada es muy sensible puesto que puede dejar sin comunicación al sensor con el Manager.</emphasis> Por ello, el sistema abre una ventana de confirmación antes de realizar cualquier acción. 
-					Asegúrese que está seguro de que desea realizar la restauración de la clave de seguridad antes de proceder a su confirmación. </para>
+				<title>Warning</title>
+				<para><emphasis role="bold">The action of restoring the private key is very sensitive since it can leave the sensor without communication with the Manager.</emphasis> Por ello, el sistema abre una ventana de confirmación antes de realizar cualquier acción. 
+				Make sure you are sure you want to restore the security key before confirming it. </para>
 			</warning>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="150" fileref="images/ch04_img034.png"/>
+					<imagedata scalefit="1" align="center" width="150" fileref="images/ch01_img040.png"/>
 				</imageobject>
 				<caption>
-					<para>Opciones del submenú de sensores IPS/IDS: Stop Auto-apply y Recreate Private Key</para>
+					<para>Submenu sensores IPS/IDS options: Stop Auto-apply y Recreate Private Key</para>
 				</caption>
 			</mediaobject>
 		</section>	
 		<section>
 			<title>IPS/IDS Settings</title>
-			<para>En este apartado encontramos las opciones disponibles para configurar los sensores IPS/IDS y el comportamiento de Snort y PF_RING.</para>
+			<para>In this section we find the options available to configure the IPS/IDS sensors and the behavior of Snort and PF_RING.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img035.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img041.png"/>
 				</imageobject>
 				<caption>
-					<para>Campos editables para la configuración IPS/IDS (IPS Settings)</para>
+					<para>Editable fields for IPS/IDS (IPS Settings)</para>
 				</caption>
 			</mediaobject>
 			<para><literal>Sensor mode</literal></para>
-			<para>Modo predeterminado del sensor <literal>Default sensor mode</literal>: en esta casilla aparecerá el modo que se haya heredado de niveles superiores.
-			En este caso aparecerá la palabra INHERITED seguida, entre paréntesis, del modo que ha sido heredado.</para>
-			<para>En este campo, el usuario podrá elegir entre 4 opciones diferentes:</para>		
+			<para><literal>Default sensor mode</literal>: in this box will appear the mode that has been inherited from higher levels.
+			In this case, the word INHERITED will appear followed, in parentheses, by the way it has been inherited.</para>
+			<para>In this field, the user can choose between 4 different options:</para>		
 			<orderedlist>
 				<listitem>
-					<para><emphasis role="bold">IDS forwarding:</emphasis> el tráfico es desviado de manera inmediata por el sensor; a continuación, una copia del mismo es analizada.
-					En la práctica, produce el mismo efecto que tener un TAP interpuesto antes del sensor.</para>
+					<para><emphasis role="bold">IDS forwarding:</emphasis> traffic is immediately forwarded by the sensor; then a copy of it is analyzed.
+					In practice, it produces the same effect as having a TAP before the sensor.</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">IDS span:</emphasis> únicamente se analiza el tráfico. No se realiza ningún desvío.</para>
+					<para><emphasis role="bold">IDS span:</emphasis> only the traffic is analyzed. No forward is made.</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">IPS test mode:</emphasis> el tráfico es analizado y, posteriormente, desviado. Este modo es el recomendado para realizar simulaciones de bloqueo de tráfico atacante.</para>
+					<para><emphasis role="bold">IPS test mode:</emphasis> the traffic is analyzed and subsequently forwarded. This mode is recommended for simulations of blocking attacker traffic.</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">IPS:</emphasis> esta es la opción más común en entornos de producción. 
-					Snort analiza el tráfico y deja pasar o bloquea el tráfico dependiendo de las acciones establecidas para las reglas incluidas en la política activa del sensor.</para>
+					<para><emphasis role="bold">IPS:</emphasis> this is the most common option in production environments.
+					Snort analyzes the traffic and passes or blocks the traffic depending on the actions set on the rules included in the sensor signature policy.</para>
 				</listitem>			
 			</orderedlist>
 			<important>
-				<title>Importante</title>
-				<para>El sensor debe estar configurado en <emphasis role="bold">modo IPS Test mode o IPS </emphasis> para el escenario básico de la instalación de redborder IPS.</para>
+				<title>Important</title>
+				<para>The sensor must be configured in <emphasis role="bold">IPS Test or IPS mode</emphasis> for the basic scenario of installing redborder IPS.</para>
 			</important>
-			<para>A continuación, el usuario puede editar una serie de parámetros relacionados con el comportamiento de PF_RING y Snort:</para>
+			<para>Next, the user can edit a series of parameters related to the behavior of PF_RING and Snort:</para>
 			<para><literal>PF_RING Watermark</literal></para>
-			<para>Indica el número mínimo de paquetes entrantes para la función poll.</para>
+			<para>Indicates the minimum number of incoming packets for the poll function.</para>
 			<itemizedlist mark="bullet">	
 				<listitem>		
-					<para><emphasis>Valor bajo de watermark (1):</emphasis> reduce la latencia de la función poll, disminuye el throughtput, pero puede incrementar el número de llamadas a la función poll.</para>
+					<para><emphasis>Low watermark value (1):</emphasis> reduces the latency of the poll function, decreases the throughtput, but may increase the number of calls to the poll function.</para>
 				</listitem>
 				<listitem>	
-					<para><emphasis>Valor alto de watermark</emphasis> (nunca debe exceder del 50% del tamaño del anillo o de lo contrario el módulo kernel de PF_RING aumentará este valor): reduce el número de llamadas poll,
-				pero aumenta ligeramente la latencia de paquete.</para>
+					<para><emphasis>High watermark value</emphasis> (should never exceed 50% of the ring size or else the PF_RING kernel module will increase this value): reduce the number of poll calls,
+but slightly increases packet latency.</para>
 				</listitem>
 			</itemizedlist>
 			<para><literal>PF_RING Clustermode</literal></para>
-			<para>Divide el tráfico entrante en varios anillos. Especialmente indicado para <emphasis role="bold"> distribuir la carga</emphasis> 
-			al posibilitar que una misma interfaz sea leída desde varios programas de Snort.</para>
-			<para>Indica el número de parámetros usados para determinar el hash y el balanceo del tráfico entre los diferentes procesos Snort. 
-			Dependiendo del número elementos que se agregan a la tupla el tráfico se distribuirá de una forma distinta:</para>
+			<para>Split incoming traffic into multiple rings. Especially suitable for <emphasis role="bold"> distributing the load</emphasis> 
+			by allowing the same interface to be read from several Snort programs.</para>
+			<para>Indicates the number of parameters used to determine the hashing and balancing of the traffic between the different Snort processes.
+			Depending on the number of elements that are added to the tuple, the traffic will be distributed in a different way:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para>2 tuple flow: IP de origen+IP de destino</para>
+					<para>2 tuple flow: Source IP+Destination IP</para>
 				</listitem>
 				<listitem>
-					<para>4 tuple flow: IP de origen:Puerto_src+IP de destino:Puerto_dst</para>
+					<para>4 tuple flow: Source IP:Port_src+Destination IP:Port_dst</para>
 				</listitem>
 				<listitem>
-					<para>5 tuple flow: IP de origen:Puerto_src+IP de destino:Puerto_dst+protocolo</para>
+					<para>5 tuple flow: Source IP:Port_src+Destination IP:Port_dst+protocol</para>
 				</listitem>
 				<listitem>
-					<para>6 tuple flow: IP de origen:Puerto_src+IP de destino:Puerto_dst+protocolo+Vlan</para>
+					<para>6 tuple flow: Source IP:Port_src+Destination IP:Port_dst+protocol+Vlan</para>
 				</listitem>
 			</itemizedlist>
 			<para><literal>Bypass controlled by Snort</literal></para>
-			<para>Cuando la máquina arranca Snort puede tomar el control de los bypass automáticamente.
-			Esta acción puede provocar un flapping indeseado del firewall para evitar que Snort esté habilitado para el control de los bypass.</para>
+			<para>When the machine starts Snort can automatically take control of the bypasses.
+			This action may cause unwanted firewall flapping to prevent Snort from being enabled for bypass control.</para>
 			<para><literal>Threshold Count</literal></para>
-			<para>Número máximo de ocurrencias en un rango de tiempo determinado para que un evento sea enviado.</para>
+			<para>Maximum number of occurrences in a given time range for an event to be sent.</para>
 			<para><literal>Threshold Seconds</literal></para>
-			<para>Tiempo mínimo (en segundos) que tiene que pasar para que un evento sea enviado.</para>
+			<para>Minimum time (in seconds) that has to pass for an event to be sent.</para>
 			<note>
-				<title>Nota</title>
-				<para>En escenarios donde existe una sobrecarga en el tráfico es posible realizar una configuración que permita mantener la conectividad por encima del análisis de los paquetes.</para>
-				<para>Las opciones de <literal>Best effort Configuration</literal> y <literal>Software Bypass Configuration</literal> se utilizan para priorizar el reenvío de información sobre el análisis de la misma.</para>
+				<title>Note</title>
+				<para>In scenarios where there is an overload of traffic, it is possible make a configuration that allows connectivity over packet analysis.</para>
+				<para>The options of <literal>Best effort Configuration</literal> and <literal>Software Bypass Configuration</literal> are used to prioritize forwarding information over analyzing it.</para>
 			</note>
 			<para><literal>Best effort Configuration</literal></para>
-			<para>Esta configuración solo aplica en el modo <emphasis role="bold">IDS.</emphasis></para>
-			<para>Al habilitar esta opción, el tráfico es copiado en una cola interna de trabajo y posteriormente, desviado. 
-			Solo en el caso de que no existan más paquetes que desviar, se procesarán los paquetes que se encuentran en la cola interna. 
-			Si la cola interna se encontrase llena, los paquetes no serán analizados. Esto aumenta la fiabilidad del desvío, pero disminuye el rendimiento del análisis. </para>
+			<para>This setting only applies in <emphasis role="bold">IDS</emphasis> mode.</para>
+			<para>By enabling this option, traffic is copied to an internal work queue and then forwarded.
+Only if there are no more packets to be forward, the packets in the internal queue will be processed.
+If the internal queue is full, the packets will not be analyzed. This increases the reliability of the bypass, but decreases the performance of the analysis. </para>
 			<para><literal>Software Bypass Configuration</literal></para>
-			<para>Esta configuración solo aplica en el modo <emphasis role="bold">IPS.</emphasis></para>
-			<para>La activación de esta opción implica que, si la ocupación del anillo de la interfaz es alta, 
-			el IPS desviará los paquetes sin analizar hasta que la ocupación se encuentre por debajo de otro valor predeterminado.</para>
+			<para>This setting only applies in <emphasis role="bold">IPS</emphasis> mode.</para>
+			<para>The activation of this option implies that, if the occupation of the interface ring is high,
+IPS will forward unanalyzed packets until occupancy falls below some other predetermined value.</para>
 			<important>
-				<title>Importante</title>
-				<para>La configuración del bypass de IPS se realiza a nivel de software. Para determinar la configuración de los bypass a nivel de hardware, consultar el apartado <literal>Segments.</literal></para>			
+				<title>Important</title>
+				<para>IPS bypass configuration is done at the software level. To determine the configuration of the bypasses at the hardware level, refer to the section <literal>Segments.</literal></para>			
 			</important>
 		</section>	
 		<section>
-			<title>Servidores</title>
-			<para>En este apartado el usuario puede definir la configuración de los servidores Proxy y Syslog.</para>
+			<title>Servers</title>
+			<para>In this section the user can define the configuration of the Proxy and Syslog servers.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img036.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img042.png"/>
 				</imageobject>
 				<caption>
-					<para>Configuración servidores Proxy y Syslog</para>
+					<para>Proxy and Syslog servers configuration</para>
 				</caption>
 			</mediaobject>
-			<para>Este apartado mostrará todos sus campos con la configuración heredadas por el sensor. El usuario podrá editar la siguiente información: </para>
+			<para>This section will show all its fields with the inherited configuration by the sensor. The user will be able to edit the following information: </para>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para>Syslog Servers</para>
@@ -861,360 +861,360 @@
 		</section>
 		<section>
 			<title>Trap Servers</title>
-			<para>En este apartado se realiza la configuración del SNMP de los <literal>Trap Servers</literal> .</para> 
+			<para>In this section, the SNMP <literal>Trap Servers</literal> configuration is made.</para> 
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img037.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img043.png"/>
 				</imageobject>
 				<caption>
-					<para>Listado de Trap Servers</para>
+					<para>Trap Servers list</para>
 				</caption>
 			</mediaobject>
-			<para><emphasis role="bold">Añadir Trap Server:</emphasis> Es posible añadir un nuevo <literal>Trap Server</literal> haciendo clic en <literal>+Add.</literal>
-			A continuación, introducir la IP y la Comunidad SNMP a la que pertenece. <literal>Update</literal> para guardar los cambios introducidos.</para>		
-			<para><emphasis role="bold">Eliminar Trap Server:</emphasis> Pulsar en el icono "Eliminar" para descartar el Trap Server seleccionado.</para>
+			<para><emphasis role="bold">Add Trap Server:</emphasis> It is possible to add a new <literal>Trap Server</literal> clicking on <literal>+Add.</literal>
+			Next, enter the IP and the SNMP Community to which it belongs. <literal>Update</literal> to save the changes made.</para>		
+			<para><emphasis role="bold">Delete Trap Server:</emphasis> Click on the "Delete" icon to discard the selected Trap Server.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img038.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img044.png"/>
 				</imageobject>
 				<caption>
-					<para>Añadir nuevo Trap Server</para>
+					<para>Add new Trap Server</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
-			<title>Segmentos</title>
-			<para>En este apartado se muestra un listado con los segmentos que se han creado durante el proceso de registro de sensores en el Manager. 
-			Se muestra la siguiente información:</para>		
+			<title>Segments</title>
+			<para>This section shows a list with the segments that have been created during the sensor registration process in the Manager.
+The following information is displayed:</para>		
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para>Segmento</para>
+					<para>Segment</para>
 				</listitem>
 				<listitem>
 					<para>Interfaces</para>
 				</listitem>
 				<listitem>
-					<para>Bypass: activar o desactivar la función bypass.</para>
+					<para>Bypass: activate or deactivate the bypass function.</para>
 				</listitem>
 				<listitem>
-					<para>Tipo de segmento</para>
+					<para>Segment type</para>
 				</listitem>
 				<listitem>
-					<para>Velocidad</para>
+					<para>Speed</para>
 				</listitem>
 			</itemizedlist> 
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img039.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img045.png"/>
 				</imageobject>
 				<caption>
-					<para>Información sobre los segmentos de red del sensor</para>
+					<para>Information about the sensor network segments</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
 			<title>Network routes</title>
-			<para>Permite la configuración de rutas adicionales que complementan a la pasarela predeterminada.</para>
+			<para>Allows the configuration of additional routes that complement the default gateway.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img040.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img046.png"/>
 				</imageobject>
 				<caption>
-					<para>Rutas estáticas de red o Network Routes</para>
+					<para>Static network routes or Network Routes</para>
 				</caption>
 			</mediaobject>
-			<para> Es posible añadir una nueva ruta mediante la pestaña <literal>+Add Route.</literal> A continuación insertar red y pasarela de red.</para>
+			<para>It is possible to add a new route through the tab <literal>+Add Route.</literal> Next insert network and network gateway.</para>
 			<mediaobject>
 				<imageobject>	
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img041.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img047.png"/>
 				</imageobject>
 				<caption>
-					<para>Añadir nueva ruta de red: <literal>Network Route</literal></para>
+					<para>Add new network route: <literal>Network Route</literal></para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
 			<title>Location</title>
-			<para>Localiza el sensor o el dominio en un mapamundi.</para>
-			<para><emphasis role="bold">Añadir localización:</emphasis> es posible agregar una localización desde la opción <literal>+Add Location</literal> 
-			e introducir las coordenadas, o bien, mediante el menú desplegado por el botón derecho del ratón.</para>
+			<para>Locate the sensor or domain on a world map.</para>
+			<para><emphasis role="bold">Add location:</emphasis> it is possible to add a location from the option <literal>+Add Location</literal> 
+			and enter the coordinates, or through the menu displayed by the right mouse button.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img042.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img048.png"/>
 				</imageobject>
 				<caption>
-					<para>Añadir localización del sensor: +Add Location</para>
+					<para>Add sensor location: +Add Location</para>
 				</caption>
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img043.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img049.png"/>
 				</imageobject>
 				<caption>
-					<para>Añadir localización del sensor: menú botón derecho</para>
+					<para>Add sensor location: right click menu</para>
 				</caption>
 			</mediaobject>
 			<warning>
-				<title>Advertencia</title>
-				<para>Para poder visualizar datos en la vista <literal>Maps</literal> es necesario añadir las localizaciones de los sensores en esta interfaz.</para>
+				<title>Warning</title>
+				<para>To be able to display data in the view <literal>Maps</literal> it is necessary to add the locations of the sensors in this interface.</para>
 			</warning>
 		</section>
 		<section>
 			<title>IP Variables</title> 
-			<para>En este apartado se muestran los valores para las variables IP de Snort. </para>
-			<para>Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. 
-			Por ejemplo, en el caso de que se hayan configurado redes locales con IPs públicas. </para>
-			<para>Aquellas variables IP heredadas de un nivel superior aparecerán con un check en la casilla <literal> Inherited.</literal></para>
-			<para><emphasis role="bold">Acciones disponibles:</emphasis> exportar, importar, editar y eliminar las variables IP. </para>
+			<para>This section shows the values ​​for the Snort IP variables.</para>
+			<para>Some Snort variables must be modified (edited) to suit the user's network infrastructure so that Snort can recognize them.
+For example, in the event that local networks with public IPs have been configured.</para>
+			<para>Those IP variables inherited from a higher level will appear with a check in the box <literal> Inherited.</literal></para>
+			<para><emphasis role="bold">Available actions:</emphasis> export, import, edit and delete IP variables.</para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img044.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img050.png"/>
 				</imageobject>
 				<caption>
-					<para>Variables IP</para>
+					<para>IP variables</para>
 				</caption>
 			</mediaobject>
 			<note>
-				<title>Nota</title>
-				<para>Para más información acerca de los valores de las variables IP consultar el siguiente enlace: http://manual.snort.org/node53.html</para>
+				<title>Note</title>
+				<para>For more information about the values ​​of the IP variables see the following link: http://manual.snort.org/node53.html</para>
 			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img045.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img051.png"/>
 				</imageobject>
 				<caption>
-					<para>Editar valores de las Variables IP</para>
+					<para>Edit IP Variable values</para>
 				</caption>
 			</mediaobject>
-			<para>Es posible Exportar e importar variables IP desde las pestañas <literal>Export</literal> e <literal>Import.</literal> El formato de archivo usado en la importación y exportación debe ser .csv</para>
+			<para>It is possible to Export and import IP variables from the tabs <literal>Export</literal> and <literal>Import.</literal> The file format used in the import and export must be .csv</para>
 			<para>La opción de importación de variables ofrece la posibilidad de Añadir variables o reemplazar las existentes.</para>
 			<warning>
-				<title>Advertencia</title>
-				<para>En caso de seleccionar la opción Importar variables -> <literal>Replace variables,</literal> 
-				las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y, ésta, no fuera heredada.</para>
+				<title>Warning</title>
+				<para>In case of selecting the option Import variables -> <literal>Replace variables,</literal> 
+				the new variables will override the values ​​shown in the list if the variable already existed and was not inherited.</para>
 			</warning>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img046.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img052.png"/>
 				</imageobject>
 				<caption>
-					<para>Importar variables IP</para>
+					<para>Import IP variables</para>
 				</caption>
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img047.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img053.png"/>
 				</imageobject>
 				<caption>
-					<para>Exportar variables IP</para>
+					<para>Export IP variables</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
 			<title>Port variables</title>
-			<para>En este apartado se muestran los valores para las variables de los puertos Snort.</para>
-			<para> Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. 
-			De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior tendrán activada la casilla <literal> Inherited.</literal></para>
-			<para><emphasis role="bold">Acciones disponibles:</emphasis> exportar, importar, editar y eliminar las variables de puertos. </para>
+			<para>This section shows the values ​​for the Snort port variables.</para>
+			<para>The values ​​of these variables can also be edited in exceptional cases where non-conventional ports have been defined. 
+			In this way, Snort will be able to recognize these variables. Those that are inherited from a higher level will have the box <literal> Inherited</literal>  activated.</para>
+			<para><emphasis role="bold">Available actions:</emphasis> export, import, edit and delete port variables. </para>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img048.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img054.png"/>
 				</imageobject>
 				<caption>
 					<para>Port variables</para>
 				</caption>
 			</mediaobject>
 			<note>
-				<title>Nota</title>
-				<para>Para más información acerca de los valores de las variables de puertos Snort consultar el siguiente enlace: http://manual.snort.org/node54.html</para>
+				<title>Note</title>
+				<para>For more information about the values ​​of the Snort port variables, consult the following link: http://manual.snort.org/node54.html</para>
 			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img049.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img055.png"/>
 				</imageobject>
 				<caption>
-					<para>Editar valores de las Variables de puertos Snort</para>
+					<para>Edit Snort Port Variable Values</para>
 				</caption>
 			</mediaobject>
-			<para>Es posible Exportar e importar variables de puertos desde las pestañas <literal>Export</literal> e <literal>Import.</literal> El formato de archivo usado en la importación y exportación debe ser .csv</para>
-			<para>La opción de importación de variables ofrece la posibilidad de Añadir variables o reemplazar las existentes.</para>
+			<para>It is possible to Export and import port variables from the tabs <literal>Export</literal> and <literal>Import.</literal> The file format used in the import and export must be .csv</para>
+			<para>The import variables option offers the possibility to Add variables or replace existing ones.</para>
 			<warning>
-				<title>Advertencia</title>
-				<para>En caso de seleccionar la opción Importar variables -> <literal>Replace variables</literal> las nuevas variables anularán los valores que se muestran en la lista en caso de que la variable ya existiera y ésta, 
-				no fuera heredada.</para>
+				<title>Warning</title>
+				<para>In case of selecting the option Import variables-> <literal>Replace variables</literal> the new variables will override the values ​​shown in the list in case the variable already existed and this one,
+was not inherited.</para>
 			</warning>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img050.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img056.png"/>
 				</imageobject>
 				<caption>
-					<para>Importar variables de puertos Snort</para>
+					<para>Import snort port variables</para>
 				</caption>
 			</mediaobject>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="350" fileref="images/ch04_img051.png"/>
+					<imagedata scalefit="1" align="center" width="350" fileref="images/ch01_img057.png"/>
 				</imageobject>
 				<caption>
-					<para>Exportar variables de puertos Snort</para>
+					<para>Export snort port variables</para>
 				</caption>
 			</mediaobject>
 		</section>
 		<section>
 			<title>Groups</title>
-			<para><emphasis role="bold">Grupo:</emphasis> es un conjunto de instancias asociadas a un procesador concreto que leen de uno o más segmentos en un modo determinado.</para>
-			<para><emphasis role="bold">Instancia:</emphasis> es una asociación de un grupo de segmentos a un procesador o procesadores. En caso de que hayamos creado más de una instancia para un mismo grupo, 
-			es necesario tener configurados el mismo número de bindings que de instancias.</para>
-			<para><emphasis role="bold">Binding</emphasis> es una partición del tráfico por red o VLAN. Es "hijo" de un grupo de segmentos.</para>
-			<para>El usuario puede asignar una política a tres niveles: sensor, grupo de segmentos o bindings.</para>
-			<para>Esto aumenta la flexibilidad asociada al software, ya que, a diferencia de la anterior versión en la que una política debía aplicarse por completo para un sensor (independientemente de los segmentos creados), 
-			permite la formación de grupos de segmentos independientes y bindings.</para>
+			<para><emphasis role="bold">Group:</emphasis> it is a set of instances associated with a specific processor that read from one or more segments in a specific way.</para>
+			<para><emphasis role="bold">Instance:</emphasis> it is an association of a group of segments to a processor or processors. In case we have created more than one instance for the same group, 
+			it is necessary to have the same number of bindings configured as instances.</para>
+			<para><emphasis role="bold">Binding</emphasis> it is a partition of the traffic by network or VLAN. It is a "child" of a group of segments.</para>
+			<para>The user can assign a policy at three levels: sensor, group of segments or bindings.</para>
+			<para>This increases the flexibility associated with the software, since, unlike the previous version in which a policy had to be fully applied for a sensor (regardless of the segments created),
+allows the formation of groups of independent segments and bindings.</para>
 			<note>
-				<title>Nota</title>
-				<para><emphasis role="bold">El sistema de herencias se establece desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
-				<para>Los parámetros de configuración y las políticas de los niveles superiores afecta a aquellos "hijos" que cuelguen o dependan de ellos. En caso de que no se edite la configuración de dichos hijos,
-				el sistema asignará por defecto las políticas, modos y configuraciones asignadas al nivel "padre".</para> 	
+				<title>Note</title>
+				<para><emphasis role="bold">The inheritance system is established from the higher levels and will apply to the lower levels that hang from it.</emphasis></para>
+				<para>Configuration parameters and policies of higher levels affect those "children" that hang or depend on them. In case the configuration of said children is not edited,
+the system will assign by default the policies, modes and configurations assigned to the "parent" level.</para> 	
 			</note>
 			<mediaobject>
 				<imageobject>
-					<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img052.png"/>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img058.png"/>
 				</imageobject>
 				<caption>
-					<para>Grupos de segmentos</para>
+					<para>Segments groups</para>
 				</caption>
 			</mediaobject>
-			<para>En este apartado se puede realizar la configuración de los grupos de segmentos:</para>
+			<para>In this section you can configure the segment groups:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
-					<para><emphasis role="bold">Name:</emphasis> editar nombre del grupo</para>
+					<para><emphasis role="bold">Name:</emphasis> edit group name</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">Sensor mode:</emphasis> selección del modo que se aplicará a nivel de grupo (se hereda por defecto el modo del sensor)</para>
+					<para><emphasis role="bold">Sensor mode:</emphasis> selection of the mode to be applied at the group level (sensor mode is inherited by default)</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">Segments:</emphasis> indica el/los segmentos incluidos en el grupo</para>
+					<para><emphasis role="bold">Segments:</emphasis> indicates the segment(s) included in the group</para>
 				</listitem>
 				<listitem>
-					<para><emphasis role="bold">CPUs:</emphasis> asignación del procesador o procesadores de los que va a leer el grupo de segmentos.</para>
+					<para><emphasis role="bold">CPUs:</emphasis> assignment of the processor(s) from which the group of segments is to be read.</para>
 				</listitem>
 			</itemizedlist>
 			<important>
-				<title>Importante</title>
-				<para>Cuando existe más de un grupo de segmentos es recomendable que se le asignen procesadores o CPUs 
-				diferentes a cada grupo para distribuir los procesos y balancear de este modo la carga de cada procesador.</para>
+				<title>Important</title>
+				<para>When there is more than one group of segments, it is recommended that different processors or CPUs be assigned to each group to distribute the processes and on that way balance the load of each processor.</para>
 			</important>
 			<section>
-				<title>Condiciones para la creación de grupos de segmentos</title>
+				<title>Conditions for creating segment groups</title>
 				<itemizedlist mark="bullet">
 					<listitem>
-						<para>No es posible que dos grupos compartan los mismos segmentos.</para>
+						<para>It is not possible for two groups to share the same segments.</para>
 					</listitem>
 					<listitem>
-						<para>Dos instancias del mismo grupo no pueden tener distintos modos <literal>(Sensor mode).</literal></para>
+						<para>Two instances of the same group cannot have different modes <literal>(Sensor mode).</literal></para>
 					</listitem>
 					<listitem>
-						<para>Sensores IPS/IDS: solo pueden colgar de ellos sus propios grupos y bindings.</para>
+						<para>IPS/IDS sensors: they can only hang from them their own groups and bindings.</para>
 					</listitem>
 					<listitem>
-						<para>Los grupos y los bindigs pueden moverse y hacerlos depender de dominios. Sin embargo, estos, tan solo pueden ser devueltos al sensor IPS al que pertenecían antes de moverlos.</para>
+						<para>Groups and links can be moved and make then domain dependent. However, these can only be returned to the IPS sensor they belonged to before being moved.</para>
 					</listitem>
 				</itemizedlist>
 			</section>
 			<section>
-				<title>Añadir grupo de segmentos/ Editar grupo de segmentos</title>
-				<para>Para añadir un nuevo grupo basta con seleccionar la opción <literal>+Add Group.</literal></para>
-				<para>Para la edición de un grupo ya existente, hacer clic sobre el icono "Editar".</para>
-				<para>En ambos casos, el usuario accederá a la interfaz de configuración a nivel de grupo. En ella puede modificar la siguiente información:</para>
+				<title>Add/Edit Segment Group</title>
+				<para>To add a new group, simply select the option <literal>+Add Group.</literal></para>
+				<para>To edit an existing group, click on the "Edit" icon.</para>
+				<para>In both cases, the user will access the configuration interface at the group level. In it you can modify the following information:</para>
 				<itemizedlist mark="bullet">
 					<listitem>
-						<para><emphasis role="bold">Name:</emphasis> editar nombre del grupo. </para>
+						<para><emphasis role="bold">Name:</emphasis> edit group name </para>
 					</listitem>
 					<listitem>
-						<para><emphasis role="bold">Description:</emphasis> añadir una descripción al grupo de segmentos.</para>
+						<para><emphasis role="bold">Description:</emphasis> add a description to the segment group.</para>
 					</listitem>
 					<listitem>
-						<para><emphasis role="bold">IPS/IDS Settings:</emphasis> configuración de los parámetros de Snort a nivel de grupo. </para>				</listitem>
-					<listitem>
-						<para><emphasis role="bold">IP Variables:</emphasis> listado de valores para las variables IP de Snort a nivel de grupo. 
-				Algunas variables de Snort deben ser modificadas (editadas) para adaptarlas a la infraestructura de red del usuario y que, de este modo, Snort pueda reconocerlas. 
-				Aquellas que sean heredadas de un nivel superior, aparecerán con un check en la casilla <literal> Inherited.</literal></para>
+						<para><emphasis role="bold">IPS/IDS Settings:</emphasis> configuring Snort parameters at the group level.</para>
 					</listitem>
 					<listitem>
-						<para><emphasis role="bold">Port Variables:</emphasis> En este apartado se muestran los valores para las variables de los puertos Snort a nivel de grupo. 
-						Los valores de estas variables también pueden ser editadas en casos excepcionales en los que se hayan definido puertos no convencionales. 
-				De este modo, Snort podrá reconocer dichas variables. Aquellas que sean heredadas de un nivel superior, aparecerán marcadas como <literal> Inherited.</literal></para>
+						<para><emphasis role="bold">IP Variables:</emphasis> list of values ​​for the Snort IP variables at the group level. 
+				Some Snort variables must be modified (edited) to suit the user's network infrastructure so that Snort can recognize them.
+Those that are inherited from a higher level will appear with a check in the <literal>Inherited</literal> box.</para>
 					</listitem>
 					<listitem>
-						<para><emphasis role="bold">Bindings:</emphasis> los bindings son particiones del tráfico a través de red o VLAN. Actúan como "hijos" del grupo a nivel de herencias y aplicación de políticas. 
-					Para añadir un nuevo binding hacer clic en <literal>+Add binding</literal> e introducir el nombre.</para>
+						<para><emphasis role="bold">Port Variables:</emphasis> This section shows the values ​​for Snort ports variables at the group level.
+The values ​​of these variables can also be edited in exceptional cases where non-conventional ports have been defined.
+				In this way, Snort will be able to recognize these variables. Those that are inherited from a higher level will appear marked as <literal> Inherited.</literal></para>
+					</listitem>
+					<listitem>
+						<para><emphasis role="bold">Bindings:</emphasis> bindings are partitions of traffic across networks or VLANs. They act as "children" of the group at the level of inheritance and application of policies. 
+					To add a new binding click on <literal>+Add binding</literal> and enter the name.</para>
 					</listitem>
 				</itemizedlist>
 				<note>
-					<title>Nota</title>
-					<para>Recuerde que el grupo de segmentos mostrará la configuración que ha heredado del sensor. Esta es la que se mostrará por defecto en la pantalla de edición a nivel de grupo.</para>
+					<title>Note</title>
+					<para>Remember that the segment group will display the settings it has inherited from the sensor. This is the one that will be shown by default in the editing screen at the group level.</para>
 				</note>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img053.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img059.png"/>
 					</imageobject>
 					<caption>
-						<para>Añadir/editar grupo de segmentos</para>
+						<para>Add/edit segment group</para>
 					</caption>
 				</mediaobject>
-					<para><emphasis role="bold">Eliminar un grupo de segmentos</emphasis></para>
-					<para>En cualquier momento se puede borrar un grupo mediante el icono "Eliminar". El sistema mostrará un mensaje de confirmación. </para>
+					<para><emphasis role="bold">Delete a segment group</emphasis></para>
+					<para>A group can be deleted at any time using the "Delete" icon. The system will display a confirmation message.</para>
 				<important>
-					<title>Importante</title>
-					<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. 
-				Los segmentos quedarán libres para su integración en otro grupo. </para>
+					<title>Important</title>
+					<para>In case that a group had a series of policies assigned, when the group is deleted, these will no longer be applied to the segments that belonged to the group.
+The segments will be free for integration into another group. </para>
 				</important>
 			</section>
 			<section>
-				<title>Eliminar un grupo de segmentos</title>
-				<para>En cualquier momento se puede borrar un grupo mediante el icono "Eliminar". El sistema mostrará un mensaje de confirmación. </para>
+				<title>Delete a segment group</title>
+				<para>A group can be deleted at any time using the "Delete" icon. The system will display a confirmation message.</para>
 					<important>
-					<title>Importante</title>
-					<para>En caso de que un grupo tuviera asignada una serie de políticas, al eliminar el grupo, estas dejarán de aplicarse en los segmentos que pertenecían al grupo. 
-					Los segmentos quedarán libres para su integración en otro grupo. </para>
+					<title>Important</title>
+					<para>In case that a group had a series of policies assigned, when the group is deleted, these will no longer be applied to the segments that belonged to the group.
+The segments will be free for integration into another group.</para>
 				</important>
 			</section>
 			<section>
 				<title>Bindings</title>
-					<para><emphasis role="bold">Añadir/editar configuración de bindings</emphasis></para>
-					<para>Existen dos maneras de añadir o editar un binding:</para>
+					<para><emphasis role="bold">Add/edit binding configuration</emphasis></para>
+					<para>There are two ways to add or edit a binding:</para>
 					<orderedlist numeration="arabic">
 					<listitem>
-						<para>Pantalla de configuración de sensor IPS/IDS: Groups -> Icono edición -> Bindings-> <literal>+ Add binding</literal>/Icono edición</para>
+						<para>IPS/IDS sensor configuration view: Groups -> Edit icon -> Bindings-> <literal>+ Add binding</literal>/Edit icon</para>
 					</listitem>
 					<listitem>
-						<para>Pantalla de configuración de sensor IPS/IDS: <literal>+ Add Group</literal> -> Bindings -> <literal>+ Add binding</literal>/Icono edición</para>
+						<para>IPS/IDS sensor configuration view: <literal>+ Add Group</literal> -> Bindings -> <literal>+ Add binding</literal>/Edit icon</para>
 					</listitem>
 				</orderedlist>
-				<para>Cuando añadimos un nuevo binding el sistema nos solicita un nombre.</para>
+				<para>When we add a new binding the system prompts us for a name.</para>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img054.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img060.png"/>
 					</imageobject>
 					<caption>
-						<para>Grupos de segmentos -> Bindings</para>
+						<para>Segments groups -> Bindings</para>
 					</caption>
 				</mediaobject>
 				<note>
-					<title>Nota</title>
-					<para>Para que un binding sea tenido en cuenta, hay que asignarle, al menos, una Vlan.</para>
+					<title>Note</title>
+					<para>For a binding to be taken into account, at least one Vlan must be assigned to it.</para>
 				</note>
 				<mediaobject>
 					<imageobject>
-						<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img055.png"/>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img061.png"/>
 					</imageobject>
 					<caption>
-						<para>Editar configuración de bindings</para>
+						<para>Edit binding configuration</para>
 					</caption>
 				</mediaobject>
-				<para>Los campos de edición para la configuración a nivel de binding son los siguientes:</para>
+				<para>The editing fields for the binding level configuration are the following:</para>
 				<itemizedlist>
 					<listitem>
-						<para>General: Nombre y descripción.</para>
+						<para>General: Name and description.</para>
 					</listitem>
 					<listitem>
 						<para>IPS/IDS Settings</para>
@@ -1226,31 +1226,30 @@
 						<para>Port Variables</para>
 					</listitem>
 				</itemizedlist>
-				<para>Para asegurarse de que las modificaciones realizadas en un binding ya existentes se van a aplicar correctamente, hacer clic en <literal>Update</literal></para>
+				<para>To ensure that modifications made to an existing binding will be applied correctly, click on <literal>Update</literal></para>
 				<warning>
-					<title>Advertencia</title>
-					<para>En caso de que los campos IPS/IDS Settings, IP Variables y Port Variables no sean modificados, el binding heredará la configuración del grupo de segmentos del que depende. </para>
+					<title>Warning</title>
+					<para>If the IPS/IDS Settings, IP Variables and Port Variables fields are not modified, the binding will inherit the configuration of the group of segments on which it depends.</para>
 				</warning>
 			</section>
 		</section>
 	 </section>
 	 <section>
-		<title>Herencias de las políticas</title>
-		<para>Como hemos visto anteriormente, <footnote><para>Consultar capítulo: "Sensores" para más información sobre dependencias y organización jerárquica en redborder.</para></footnote> la organización de los elementos de red 
-		creados en redborder es jerárquica y por tanto, establece dependencias entre niveles y otros.</para>
-		<para>Estas dependencias establecen un sistema de herencias que afecta tanto en la configuración como en las políticas aplicadas en cada uno de los niveles (de mayor a menor jerarquía):</para>
+		<title>Inherit policies</title>
+		<para>As we have seen before, the organization of network elements created in redborder is hierarchical and therefore establishes dependencies between levels and others.</para>
+		<para>These dependencies establish an inheritance system that affects both the configuration and the policies applied at each of the levels (from higher to lower hierarchy):</para>
 		<itemizedlist>
 			<listitem>
 				<para>Root</para>
 			</listitem>
 			<listitem>
-				<para>Dominio</para>
+				<para>Domain</para>
 			</listitem>
 			<listitem>
-				<para>Sensores</para>
+				<para>Sensors</para>
 			</listitem>
 			<listitem>
-				<para>Grupo</para>
+				<para>Group</para>
 			</listitem>
 			<listitem>
 				<para>Binding</para>
@@ -1258,41 +1257,40 @@
 		</itemizedlist>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img056.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img062.png"/>
 			</imageobject>
 			<caption>
-				<para>Sensors -> Tree: jerarquías y dependencias entre niveles</para>
+				<para>Sensors -> Tree: hierarchies and dependencies between levels</para>
 	 		</caption>
 		</mediaobject>	
 		<note>
-			<title>Nota</title>
-			<para>El sistema de herencias establece que la configuración de los niveles superiores afecta a la de aquellos "hijos" que cuelguen o dependan de ellos. En caso de que no se edite la configuración de dichos hijos,
-			el sistema asignará por defecto las políticas, modos y configuraciones asignadas al nivel "padre". 
-			<emphasis role="bold">El sistema de herencias se establece por tanto, desde los niveles superiores y aplicará a los niveles inferiores que cuelguen de él.</emphasis></para>
+			<title>Note</title>
+			<para>The inheritance system establishes that the configuration of higher levels affects that of those "children" that hang or depend on them. In case the configuration of said children is not edited,
+the system will assign by default the policies, modes and configurations assigned to the "parent" level.
+			<emphasis role="bold">The inheritance system is therefore established from the higher levels and will apply to the lower levels that hang from it.</emphasis></para>
 		</note>
 		<para><emphasis role="bold">General Settings</emphasis></para>
-		<para>En la sección <literal>Tools</literal> encontramos la opción de <literal>General Settings</literal> desde la cual el usuario puede establecer la configuración de los parámetros generales del Manager. </para>
-		<para>Este es el máximo nivel de configuración (es como si se tratara del dominio <emphasis role="bold">root</emphasis>) por lo que las propiedades que aquí se definan serán heredadas 
-		por el resto de dominios y sensores que se encuentren por debajo de este nivel.</para>
+		<para>In <literal>Tools</literal> section we found the option <literal>General Settings</literal> from which the user can establish the configuration of the general parameters of the Manager.</para>
+		<para>This is the highest level of configuration (<emphasis role="bold">root</emphasis> domain) so the properties defined here will be inherited by the rest of the domains and sensors that are below this level.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img057.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img063.png"/>
 			</imageobject>
 			<caption>
-				<para>General Settings: Configuración General del Manager o "root"</para>
+				<para>General Settings: General Manager configuration or "root"</para>
 	 		</caption>
 		</mediaobject>
-		<para><emphasis role="bold">Configuración heredada: "Inherited"</emphasis></para>	
-		<para>Cuando se crea un dominio o sensor o se edita por primera vez, obervaremos que algunos parámetros vienen acompañados de la etiqueta 
-		<emphasis role="bold">"Inherited"</emphasis>, esto quiere decir que han heredado los valores heredados de la configuración general del Manager
-		 o de los dominios o sensores que se encuentren por encima del elemento recién creado. 
-		Para cambiar esta configuración, el usuario deberá sobreescribir esa información.</para>
+		<para><emphasis role="bold">Inherited setting: "Inherited"</emphasis></para>	
+		<para>When a domain or sensor is created or edited for the first time, we will notice that some parameters are accompanied by the label 
+		<emphasis role="bold">"Inherited"</emphasis>, this means that they have inherited the values ​​inherited from the general configuration of the Manager
+or of the domains or sensors that are above the newly created element.
+To change this setting, the user will need to override that information.</para>
 		<mediaobject>
 			<imageobject>
-				<imagedata scalefit="1" align="center" width="450" fileref="images/ch04_img058.png"/>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img064.png"/>
 			</imageobject>
 			<caption>
-				<para>Inherited: Configuración heredada de sensores IPS/IDS</para>
+				<para>Inherited IPS/IDS sensor configuration</para>
 	 		</caption>
 		</mediaobject>
     </section>	
