@@ -438,8 +438,6 @@
 				<para>Summary of assigned segments and ports</para>
 			</caption>
 			</mediaobject>		
-			<para><emphasis role="bold">Apply changes</emphasis></para>
-			<para>To save the settings press <keycap>a.</keycap></para>
 			<para>You can delete in any moment the created segments by selection <literal>delete segment</literal>, pressing  <keycap>d</keycap>.</para>
 			<para>To return to the main network configuration menu, select the option <literal>quit</literal> by pressing <keycap>q</keycap>.</para>
 			<mediaobject>
@@ -450,6 +448,8 @@
 				<para>Segments overview</para>
 			</caption>
 			</mediaobject>
+			<para><emphasis role="bold">Apply changes</emphasis></para>
+			<para>To save the settings press <keycap>a.</keycap></para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img029.png"/>

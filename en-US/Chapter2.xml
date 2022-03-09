@@ -32,7 +32,10 @@
 				<para><literal>IP adress for rB Master Manager [127.0.0.1]:</literal> insert the Manager IP.</para>
 			</listitem>
 			<listitem>
-				<para><literal>Register rB:</literal> register the sensor into the Manager.</para>
+				<para><literal>Register rB/Manager:</literal> register the sensor into the Manager.</para>
+			</listitem>
+            <listitem>
+				<para><literal>Register to a redborder cloud:</literal> register the sensor into redborder live platform.</para>
 			</listitem>
 		</orderedlist>
     
