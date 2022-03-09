@@ -29,7 +29,7 @@
 				<para><literal>Set local time:</literal> configure local time.</para>
 			</listitem>
 			<listitem>
-				<para><literal>IP adress for rB Master Manager [127.0.0.1]:</literal> introduce the Manager IP.</para>
+				<para><literal>IP adress for rB Master Manager [127.0.0.1]:</literal> insert the Manager IP.</para>
 			</listitem>
 			<listitem>
 				<para><literal>Register rB:</literal> register the sensor into the Manager.</para>
@@ -83,7 +83,7 @@
             </mediaobject>
         </section>
         <section>
-            <title>Introduce the Master Manager IP</title>
+            <title>Insert the Master Manager IP</title>
             <para>Select option <literal>3) IP adress for rB Master Manager [.*].</literal></para>
             <para>Insert the IP address or domain name of the computer used by the user. The system will perform a series of checks to verify if it is reachable. This process may take a few seconds.</para>
             <para>The system will synchronize the time of the computers and then restart a couple of services in order to finish the time synchronization.</para>

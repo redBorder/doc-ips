@@ -61,11 +61,18 @@
 		<para> The ISO image is prepared to perform the boot from a DVD reader, USB device or as an ISO file for a virtual machine.</para>
 		<para><emphasis role = "bold">NOTE: The process of creating a bootable USB for the IPS installation is the same as for the manager installation. You can find it accessing the support page.</emphasis></para>
 		<para>In order to burn the ISO image from a Linux system to a USB device, the following command needs to be used if the USB device is mapped in /dev/sdd:</para>
-		<programlisting>[root@machine ~]# dd if=redBorder-3.1.80-18-x86_64-6.5-sensor.iso of=/dev/sdd bs=10M</programlisting>
+		<programlisting>[root@machine ~]# dd if=redBorder-3.1.XX-XX-x86_64-6.5-sensor.iso of=/dev/sdd bs=10M</programlisting>
+		<note>
+			<title>Note</title>
+			<para>Replace XX-XX in redBorder-3.1.<emphasis>XX-XX</emphasis>-x86_64-6.5-sensor.iso by the patched version of the redborder 3.1 that you have, for example: redBorder-3.1.80-18-x86_64-6.5-sensor.iso.</para>
+		</note>
 	</section>	
 	<section>
 		<title>Installing the ISO</title>
-		<para><emphasis role = "bold">NOTE: If a usb memory is used on a real machine, the operating system will be automatically extending the disk and the data on the usb will be lost. To avoid this, the usb needs to be removed before rebooting.</emphasis></para>
+		<warning>
+			<title> Warning </title>
+			<para>If a usb memory is used on a real machine, the operating system will be automatically extending the disk and the data on the usb will be lost. To avoid this, the usb needs to be removed before rebooting.</para>
+		</warning>
 		<para>Once you have booted the redborder ISO, you will see the installation menu. To perform the installation, select the option: Install Sensor IPS:</para>
 		<mediaobject>
             <imageobject>
