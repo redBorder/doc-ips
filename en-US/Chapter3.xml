@@ -40,7 +40,7 @@
                 Click on an Access Point to access the interface configuration for general sensor parameters. </para>
                 <mediaobject>
                     <imageobject>
-                        <imagedata scalefit="1" align="center" width="150" fileref="images/ch03_img038.png"/>
+                        <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img038.png"/>
                     </imageobject>
                     <caption>
                         <para>Access Points view: edit IPS/IDS sensor</para>
@@ -314,7 +314,7 @@
             <para>Allows the configuration of additional routes that complement the default gateway.</para>
             <mediaobject>
                 <imageobject>
-                    <imagedata scalefit="1" align="center" width="350" fileref="images/ch03_img046.png"/>
+                    <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img046.png"/>
                 </imageobject>
                 <caption>
                     <para>Static network routes or Network Routes</para>
