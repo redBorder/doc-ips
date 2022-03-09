@@ -8,9 +8,32 @@
 ]>
 <chapter>
 	<title>Installing the redBorder Enterprise Edition IPS</title>
+    <section>
+		<title>What is an IDS?</title>
+		<para><emphasis role="bold">IDS</emphasis> is an Intrusion Detection System to protect one or more organization network.</para> 
+		<para>It is a specific software that runs in the user space and analyze network traffic (using a mirror port or SPAN) in one system interface or between two interfaces joined as a bridge (software switch).</para>
+		<para>The traffic is analyzed looking for anomalies, specific signatures or suspicious behavior.</para> 
+		<para>The goal of an IDS is <emphasis role="bold">to dectect intrusions and create alerts without interfering with the organization's traffic.</emphasis></para>
+    </section>
+    <section>
+		<title>What is an IPS?</title>
+		<para><emphasis role="bold">IPS</emphasis> is an Intrusion Prevention System that works in the network or networks inside an organization.</para> 
+		<para>It works in the same way as an IDS (in fact, it is usually the same software with an adapted behavior), except that in this case it does interfere with the organization's traffic,
+		 in that way when an attack is detected the system can choose between 
+		 <emphasis role="bold">showing alerts or even discard the packets, creating the same effect as a firewall.</emphasis></para>
+		 <para>The configuration and registration of the IPS/IDS sensors into the Manager is the next step to the installation one. This process consists in two steps:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>Installation and registration of the IPS/IDS sensors in the Manager</para>							
+			</listitem>	
+			<listitem>
+				<para>Configuration of basic parameters of the IPS/IDS sensors in the redborder platform</para>
+			</listitem>
+		</itemizedlist>
+	</section>
 	<section>
-	    <title> Requirements</title>
-	    <para> <emphasis role = "bold"> redBorder IPS</emphasis> is a software that needs the following requirements in order to function correctly. The minimum essential elements required for the installation as well as those recommended for correct performance are referenced at every SNORT instance being executed. They are shown in the following table:</para>
+	    <title>Requirements</title>
+	    <para><emphasis role = "bold">redBorder IPS</emphasis> is a software that needs the following requirements in order to function correctly. The minimum essential elements required for the installation as well as those recommended for correct performance are referenced at every SNORT instance being executed. They are shown in the following table:</para>
 		<mediaobject>
             <imageobject>
                 <imagedata scalefit = "1" align = "center" width = "350" fileref ="images/ch01_img001.png"/>
@@ -38,11 +61,18 @@
 		<para> The ISO image is prepared to perform the boot from a DVD reader, USB device or as an ISO file for a virtual machine.</para>
 		<para><emphasis role = "bold">NOTE: The process of creating a bootable USB for the IPS installation is the same as for the manager installation. You can find it accessing the support page.</emphasis></para>
 		<para>In order to burn the ISO image from a Linux system to a USB device, the following command needs to be used if the USB device is mapped in /dev/sdd:</para>
-		<programlisting>[root@machine ~]# dd if=redBorder-3.1.80-11-x86_64-6.5-sensor.iso of=/dev/sdd bs=10M</programlisting>
+		<programlisting>[root@machine ~]# dd if=redBorder-3.1.XX-XX-x86_64-6.5-sensor.iso of=/dev/sdd bs=10M</programlisting>
+		<note>
+			<title>Note</title>
+			<para>Replace XX-XX in redBorder-3.1.<emphasis>XX-XX</emphasis>-x86_64-6.5-sensor.iso by the patched version of the redborder 3.1 that you have, for example: redBorder-3.1.80-18-x86_64-6.5-sensor.iso.</para>
+		</note>
 	</section>	
 	<section>
 		<title>Installing the ISO</title>
-		<para><emphasis role = "bold">NOTE: If a usb memory is used on a real machine, the operating system will be automatically extending the disk and the data on the usb will be lost. To avoid this, the usb needs to be removed before rebooting.</emphasis></para>
+		<warning>
+			<title> Warning </title>
+			<para>If a usb memory is used on a real machine, the operating system will be automatically extending the disk and the data on the usb will be lost. To avoid this, the usb needs to be removed before rebooting.</para>
+		</warning>
 		<para>Once you have booted the redborder ISO, you will see the installation menu. To perform the installation, select the option: Install Sensor IPS:</para>
 		<mediaobject>
             <imageobject>
@@ -68,34 +98,15 @@
             </caption>
         </mediaobject>
 		<para>Once this page has been confirmed, the installation will carry out all of the necessary processes to prepare the system for configuration.</para>
-		<para>By default, the root password will be <emphasis role = "bold">redborder</emphasis>.</para>
-	</section>	
-	<section>
+	</section>
+		<section>
 		<title>Basic Configuration</title>
-		<para>Upon completing the installation process, you have two configuration options depending on whether or not there is a DHCP server.</para>
-		<itemizedlist mark = "bullet">
-			<listitem>
-				<para>Dynamic IP (DHCP): in this case, redBorder will have acquired an IP in its network interface.</para>
-			</listitem>
-			<listitem>
-				<para>Static IP: in this case redborder will not have any IP assigned.</para>
-			</listitem>
-		</itemizedlist>
-		<para>In both cases you will have to access the system in order to configure and register the sensor in the manager. You will access with the root user and password that was selected during installation.</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img004.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 4: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 4: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>Once inside the system you will start the configuration manager. To do this, you will execute:</para>
+		<note>
+			<title>Note</title>
+			<para>To make this installation and configuration process it is necessary to login with the user with highest permissions: <emphasis>root.</emphasis></para>
+		</note>	
+		<para>Start the configuration manager by executing:</para>
 		<programlisting>[root@rbmanager ~]# rb_sysconf</programlisting>
-		<para>A menu with different options will appear:</para>
 		<mediaobject>
             <imageobject>
                 <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img005.png"/>
@@ -107,142 +118,346 @@
                 <para>Figure 5: Basic Configuration</para>
             </caption>
         </mediaobject>
-		<para>Select option number 2 for Network configuration:</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img006.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 6: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 6: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>Select option number 1 for Management Network configuration:</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img007.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 7: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 7: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>Select option “n” to create a new bonding. You’ll configure the management IP in the first bonding (bond0).</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img008.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 8: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 8: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>You type "0" to create bond0.</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img009.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 9: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 9: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>Now you choose the first interface (port) for bond0. The second interface is optional:</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img010.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 10: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 10: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>In the next steps you set the IP address, netmask and defaullt gateway. Remember that the sensor requires visibility with the manager.</para>
-		<para>The option “Insert a route for this bonding” defines a static route. If you are going to use the default gateway, select “N” for this option.</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img011.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 11: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 11: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>To finish the configuration of the management IP, you need to apply the changes. Then you must return to the previous menu (Network configuration menu) and select option “a”.</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img012.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 12: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 12: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>When the above processes finish, the management interface will be configured.</para>
-		<para>In this section you must keep in mind whether you want an Intrusion Detection System (IDS) or an Intrusion Prevention System (IPS). For the former, you only need a management network interface and another which you will use to analyze traffic. For the latter, in addition to the management interface, you will need two or more network interfaces.</para>
-		<para>In this guide we will assume that there are two network interfaces in your system. You have already configured the first in the previous steps and this is the interface that you will use to communicate with the sensor. With the second network interface you are going to create a segment with a listening port to analyze the traffic that flows through the said interface.  Likewise, you need to send the desired traffic to this second interface. One option is to use a network listening device (Network TAP) which will be configured to resend traffic through the interfaces where it has not received traffic (see image). A diagram is included where the configuration can be seen:</para>
-		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img013.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 13: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 13: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>Now select option number 3 for Segment settings.</para>
-		<para>If you have a segment with bypass support, this capability will be auto-configured by default when detected. In our case we are going to assume that you don't have bypass support. So, you must select the option "n" (new segment) in order to configure a segment and follow the wizard:</para>
-		<orderedlist numeration="lowerroman">
+		<para>This menu consists of 5 options:</para>
+		<orderedlist numeration="arabic">
 			<listitem>
-				<para>Insert segment number (0-1) [0]: Press ENTER to select 0.</para>
+				<para><literal>System Configuration:</literal> from this option you can define basic settings such as hostname, date, time, etc.</para>
 			</listitem>
 			<listitem>
-				<para>Insert segment first port [1]: Press ENTER to select 1.</para>
+				<para><literal>Network Configuration:</literal> this is the option where you can configure the network settings.</para>
 			</listitem>
 			<listitem>
-				<para>Assign a second port to the segment (Y/n): Select N and press ENTER.</para>
+				<para><literal>Passwords:</literal> access this option if you want to change your passwords.</para>
+			</listitem>
+			<listitem>
+				<para><literal>Update rules from Manager:</literal> select this option to force the download of the Manager rules (optional).</para>
+			</listitem>
+			<listitem>
+				<para><literal>quit:</literal> exit.</para>
 			</listitem>
 		</orderedlist>
+    </section>
+	<section>
+        <title>Network configuration</title>
+        <para>IDS/IPS sensors need to comunicate with the el Manager, to make this possible it is necessary to make the network configuration. Select option <literal>2) Network Configuration</literal> from the redborder configuration menu.</para>
+        <para>Until this setting is not made properly, it will not be possible to register the sensor in the Manager..</para>
+        <para>These are the steps you need to follow to configure the network of your sensor:</para>
+        <orderedlist numeration="arabic">
+            <listitem>
+                <para>Management Network Configuration:</para>
+                <para>a) Bonding creation and management interface assignment.</para>
+                <para>b) Segments configuration.</para>	
+            </listitem>
+            <listitem>
+                <para>DNS and domain configuration</para>
+            </listitem>
+        </orderedlist>
+        <note>
+            <title>Note</title>
+            <para>The order to configure the management network can be different. The order indicated in this installation manual is the one considered most optimal.</para>
+        </note>
+        <warning>
+            <title>Warning</title>
+            <para>In case that the system is installed on a real computer that has more than one network card, the user must choose which will be the management bonding.</para>
+        </warning>
+    </section>
+	<section>
+		<title>Interface assignment and bonding creation</title>
+		<para>Select <literal>Network Configuration</literal> typing <keycap>2</keycap> and press <keycap>Enter.</keycap></para>
 		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img014.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 14: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 14: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>After creating the segment, you must apply the changes.</para>
-		<para>Lastly you can change, in Network Configuration, the DNS configuration and the desired domain. To do this, you select option 2 -  <emphasis role = "bold">DNS and domain settings</emphasis>:</para>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img016.png"/>
+			</imageobject>
+		<caption>
+			<para>Automatic assignment of segments with bypass</para>
+		</caption>
+		</mediaobject>
+		<para>In case the system recognizes interfaces with <emphasis>bypass</emphasis>, these will be automatically assigned to the segments..</para>
 		<mediaobject>
-            <imageobject>
-                <imagedata scalefit = "1" align = "center" width = "450" fileref ="images/ch01_img014.png"/>
-            </imageobject>
-            <textobject>
-				<phrase>Figure 15: Basic Configuration</phrase>
-            </textobject>
-            <caption>
-                <para>Figure 15: Basic Configuration</para>
-            </caption>
-        </mediaobject>
-		<para>You must apply the changes again.</para>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img017.png"/>
+			</imageobject>
+			<caption>
+				<para>Network sensor configuration</para>
+			</caption>
+		</mediaobject>
+		<para>To configure the network configuration correctly:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>Bonding creation: (maximum 4 bonds).</para>
+			</listitem>
+			<listitem>
+				<para>Selection and assignment of bonding ports.</para>
+			</listitem>
+			<listitem>
+				<para>Management network interfaces selection for bonding.</para>
+			</listitem>
+		</itemizedlist>
+		<para>The system will show a list with very valuable and detailed information, which will help the administrator to decide which ports are available for the creation of the bonding.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img018.png"/>
+			</imageobject>
+			<textobject>
+				<phrase>Insert bonding port</phrase>
+			</textobject>
+			<caption>
+				<para>Insertar bonding port</para>
+			</caption>
+		</mediaobject>
+		<note>
+			<title>Note</title>
+			<para>To select the default options press: <keycap>Enter</keycap></para>
+		</note>
+    
+		<section>
+			<title>Creation of a new bonding and port assignment</title>
+			<para>To illustrate this process we will create a bonding (bond0) and assign 2 ports to it.</para>
+			<para>Select option <keycap>n</keycap> that appears in the submenu on the right side of the screen.</para>
+			<para>Once you have reviewed the ports that are available, select the one that you want to assign to bonding, as it appears in the lower margin of the previous screen.</para>
+			<para>Enter the port number on the line <literal>Insert bonding first port [0]:</literal></para>
+			<para>The number in brackets <literal>[]</literal> it is the one that defines the system by default. To select this number press <keycap>Enter.</keycap></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img019.png"/>
+				</imageobject>
+				<textobject>
+					<phrase>Bonding creation: port assignment</phrase>
+				</textobject>
+				<caption>
+					<para>Bonding creation: port assignment</para>
+				</caption>
+			</mediaobject>
+			<para>The selected port will disappear from the available ports list.</para>
+			<important>
+				<title>Important</title>
+				<para>The system only allows a maximum of 4 bonds: (0-3).</para>
+			</important>
+		</section>
+		<section>
+				<title>Add a new port to bonding</title>
+				<para>The system will ask you the following question: <literal>Insert second port (y/N)</literal></para>
+				<para>The default option is displayed in upper case. Remember that if you dont need to add a new port you only need to press <keycap>Enter</keycap>.</para>
+				<para>In case you want to insert a new port press <keycap>y</keycap>.</para>
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img020.png"/>
+					</imageobject>
+				<textobject>
+					<phrase>Add new port to bonding</phrase>
+				</textobject>
+				<caption>
+					<para>Add new port to bonding</para>
+				</caption>
+				</mediaobject>
+				<para>Enter the port number on the line <literal>Insert bonding second port [1]:</literal></para>
+				<para>The number in brackets <literal>[]</literal> it is the one that defines the system by default. To select this number just press <keycap>Enter</keycap>.</para>			
+		</section>
+		<section>
+			<title>Bonding network configuration</title>
+			<para>Once you have assigned the second port to the new bond (bond0), the system will ask you to enter the following data:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>IP Address</para>
+				</listitem>
+				<listitem>
+					<para>Network mask</para>
+				</listitem>
+				<listitem>
+					<para>Gateway</para>
+				</listitem>
+				<listitem>
+					<para>Routes</para>
+				</listitem>
+			</itemizedlist>
+			<para>If your device uses the DHCP protocol, it will be assigned a default IP address. Press <keycap>Enter</keycap> to select the IP, mask and gateway assigned by the system. Otherwise, manually enter these values.</para>
+			<para>The system also gives you a default route for the created bonding.</para>
+			<para>To insert a route manually, select the option <keycap>y</keycap> on the line <literal>Insert a route for this bonding (y/N)?:</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img021.png"/>
+				</imageobject>
+				<caption>
+				<para>Manually add a route to the bonding</para>
+			</caption>
+			</mediaobject>
+			<para>Once you have finished this process, you will see a message advising you that the Bonding has been successfully created: <literal>Bonding 0 created successfully.</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img022.png"/>
+				</imageobject>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Finish the bonding creation process</title>
+			<para>Before applying changes and finishing the bonding creation process, the system will show you a table that shows the newly created bonding (bond0) together with the ports that have been assigned to it, the assigned IP and Mask and the route.</para>	
+			<para><emphasis role="bold">Apply changes</emphasis></para>
+			<para>To save the settings select option <keycap>a</keycap>.</para>
+			<para>You can delete the created bond(s) at any time by selecting the option <literal>delete bonding</literal> pressing the key <keycap>d</keycap>.</para>
+			<para>To return to the main network configuration menu, select the option <literal>quit</literal> pressing <keycap>q</keycap>.</para>
+		</section>
+	</section>
+	<section>
+		<title>DNS and domain configuration</title>
+		<para>In the network configuration menu we find the option <literal>DNS and domain settings.</literal> To start the process, select option<keycap>2</keycap>.</para>
+		<para>To perform the configuration correctly, the user must enter:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para>Domain name</para>
+			</listitem>
+			<listitem>
+				<para>Primary DNS address</para>
+			</listitem>
+			<listitem>
+				<para>Secondary DNS address (optional)</para>
+			</listitem>
+		</itemizedlist>
+		<para>Once this information has been entered, the system will warn that this configuration has been applied correctly.</para>
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img023.png"/>
+			</imageobject>
+		<caption>
+			<para>DNS and domain configuration</para>
+		</caption>
+		</mediaobject>
+		<para>To finish the process, it is not necessary to apply changes, select the option <literal>quit</literal> pressing <keycap>q</keycap> to return to the network settings main menu.</para>
+	</section>
+	<section>
+		<title>Network segments configuration</title>
+		<para>Select in the Network Configuration Menu the option <literal>Segment settings</literal> pressing the number <keycap>3</keycap>.</para>
+		<para>This screen shows the number of segments that have been created, the ports assigned to each segment and whether or not they have bypass support.</para>
+		<para>On this section you will find the following submenu:</para>
+		<itemizedlist mark="bullet">
+			<listitem>
+				<para><keycap>f)</keycap> <literal>force bypass autoassign:</literal> to automatic assignment of ports with bypass.</para>
+			</listitem>
+			<listitem>
+				<para><keycap>n)</keycap> <literal>new segment:</literal> select to create a new segment.</para>
+			</listitem>
+			<listitem>
+				<para><keycap>d)</keycap> <literal>delete segment:</literal> to delete a segment.</para>
+			</listitem>
+			<listitem>
+				<para><keycap>q)</keycap> <literal>quit:</literal>exit.</para>
+			</listitem>
+		</itemizedlist>
+		<para>To start creating the segment, select the option <literal>n) new segment.</literal></para>
+		<para>The segment creation process includes the following actions:</para>
+		<orderedlist numeration="arabic">
+			<listitem>
+				<para>Assignment of bypass interfaces to segments (optional).</para>
+			</listitem>
+			<listitem>
+				<para>Creation a segmenet: (max 16 segments).</para>
+			</listitem>
+			<listitem>
+				<para>Selecting and assigning ports to the segment</para>
+			</listitem>
+		</orderedlist>
+		<para> In order to select a port, a list with very valuable and detailed information will be displayed, which will help the administrator to decide on which ports the created segments will use.</para>
+    
+		<section>
+			<title>Bypass interfaces selection</title>
+			<para>If the system detects bypass interfaces, they are automatically assigned to segments when you enter the network configuration menu.</para>
+			<para>There are also two other ways of assigning ports or interfaces with bypass to segments:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para><emphasis role="bold"> Force bypass autoassign:</emphasis> select option <literal>Force bypass auto assign</literal> in the segment configuration menu, entering the letter <keycap>f</keycap>.</para>
+				</listitem>
+				<listitem>
+					<para><emphasis role="bold">Manual assignment:</emphasis> selecting the ports with bypass from the list of available ports that will be displayed in the process of creating the segments.</para>				
+				</listitem>
+			</itemizedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img024.png"/>
+				</imageobject>
+			<caption>
+				<para>Assign ports to the segment</para>
+			</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Creating a new segment and assigning ports</title>
+			<para>To illustrate this process we will create a segment (segment 0) and assign 2 ports to it.</para>
+			<para>To start the segment creation process, select the option <keycap>n</keycap> that appears in the submenu on the right side of the screen.</para>
+			<para>Once you have reviewed the ports that are available, select the one you want to assign to the segment as it appears in the lower margin of the previous screen.</para>
+			<para>Enter the segment number on the line <literal>Insert segment number (0-15) [0]:</literal></para>
+			<para>Th number in brackets <literal>[]</literal> it is the one that defines the system by default. To select this number press <keycap>Enter</keycap>.</para>
+			<para>The port previously assigned to the segment will disappear from the list of available ports.</para>
+			<note>
+				<title>Note</title>
+				<para>The system only allows the creation of a maximum of 16 segments (0-15).</para>
+			</note>
+		</section>
+		<section>
+			<title>Add a second port to the segmentt</title>
+			<para>Once you have assigned the first port to the segment, the system will ask you to assign a second port: <literal>Assign second port to the segment (Y/n):</literal></para>
+			<para>The default option is displayed in upper case.</para>
+			<para>Remember that if you want to assign a new port you only have to press the key <keycap>Enter</keycap>.</para>
+			<para>In case you dont want to assign a new port, type <keycap>n</keycap>. Select an available port from the list.</para>
+			<para>Enter the port number on the line <literal>Insert segment second port [3]:</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img025.png"/>
+				</imageobject>
+			<caption>
+				<para>Assign a new port to the segment</para>
+			</caption>
+			</mediaobject>
+			<para>Once both ports have been assigned to a segment, the system will notify you that the segment has been successfully created: <literal>Segment 0 created successfully.</literal></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img026.png"/>
+				</imageobject>
+			<caption>
+				<para>Segment creation confirmation</para>
+			</caption>
+			</mediaobject>
+		</section>
+		<section>
+			<title>Finish the process of creating the segments</title>
+			<para>Before applying changes and finishing the segment creation process, you will see a screen with a list that includes the following elements:</para>
+			<itemizedlist mark="bullet">
+				<listitem>
+					<para>Segments</para>
+				</listitem>
+				<listitem>
+					<para>Ports assigned to the segment</para>
+				</listitem>
+				<listitem>
+					<para>Whether or not it has bypass support</para>
+				</listitem>
+			</itemizedlist>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img027.png"/>
+				</imageobject>
+			<caption>
+				<para>Summary of assigned segments and ports</para>
+			</caption>
+			</mediaobject>		
+			<para>You can delete in any moment the created segments by selection <literal>delete segment</literal>, pressing  <keycap>d</keycap>.</para>
+			<para>To return to the main network configuration menu, select the option <literal>quit</literal> by pressing <keycap>q</keycap>.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img028.png"/>
+				</imageobject>
+			<caption>
+				<para>Segments overview</para>
+			</caption>
+			</mediaobject>
+			<para><emphasis role="bold">Apply changes</emphasis></para>
+			<para>To save the settings press <keycap>a.</keycap></para>
+			<mediaobject>
+				<imageobject>
+					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img029.png"/>
+				</imageobject>
+			<caption>
+				<para>Apply changes to finish segment creation process</para>
+			</caption>
+			</mediaobject>		
+		</section>
 	</section>
 </chapter>		
