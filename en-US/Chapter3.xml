@@ -7,7 +7,7 @@
 <!ENTITY HOLDER "Eneo Tecnología S.L. |">
 ]>
 <chapter>
-	<title>Editing and configuring IPS/IDS sensors</title>
+	<title>Editing and configuring IPS/IDS sensors from the web application</title>
 	<section>
         <title>IPS/IDS sensors configuration</title>
         <para>To configure the IPS/IDS sensors, it is necessary to access the redborder web platform by inserting the management IP assigned to the Manager in the address bar of your browser.</para>
@@ -62,7 +62,7 @@
         </itemizedlist>
     
         <section>
-            <title>Edit IPS/IDS sensor settings</title>
+            <title>Edit IPS/IDS settings overview</title>
             <para>In all the cases described, the user accesses to a basic parameters configuration view. </para>
             <para>The configuration form fields vary depending on whether you are editing a sensor, group of segments or binding.
             This step is very important since one configuration or another will determine the sensor's operating mode depending on whether it is installed in one scenario or another. 
@@ -126,7 +126,7 @@
             </itemizedlist>
             <warning>
                 <title>Warning</title>
-                <para><emphasis role="bold">The action of restoring the private key is very sensitive since it can leave the sensor without communication with the Manager.</emphasis> Por ello, el sistema abre una ventana de confirmación antes de realizar cualquier acción. 
+                <para><emphasis role="bold">The action of restoring the private key is very sensitive since it can leave the sensor without communication with the Manager.</emphasis> Therefore, the system opens a confirmation window before performing any action. 
                 Make sure you are sure you want to restore the security key before confirming it. </para>
             </warning>
             <mediaobject>
@@ -360,7 +360,7 @@
             <title>IP Variables</title> 
             <para>This section shows the values ​​for the Snort IP variables.</para>
             <para>Some Snort variables must be modified (edited) to suit the user's network infrastructure so that Snort can recognize them.
-    For example, in the event that local networks with public IPs have been configured.</para>
+    For example, in case that local networks with public IPs have been configured.</para>
             <para>Those IP variables inherited from a higher level will appear with a check in the box <literal> Inherited.</literal></para>
             <para><emphasis role="bold">Available actions:</emphasis> export, import, edit and delete IP variables.</para>
             <mediaobject>
@@ -384,7 +384,7 @@
                 </caption>
             </mediaobject>
             <para>It is possible to Export and import IP variables from the tabs <literal>Export</literal> and <literal>Import.</literal> The file format used in the import and export must be .csv</para>
-            <para>La opción de importación de variables ofrece la posibilidad de Añadir variables o reemplazar las existentes.</para>
+            <para>The variable import option offers the possibility to Add variables or replace existing ones.</para>
             <warning>
                 <title>Warning</title>
                 <para>In case of selecting the option Import variables -> <literal>Replace variables,</literal> 
@@ -499,136 +499,137 @@
                 <title>Important</title>
                 <para>When there is more than one group of segments, it is recommended that different processors or CPUs be assigned to each group to distribute the processes and on that way balance the load of each processor.</para>
             </important>
-        </section>
-        <section>
-            <title>Conditions for creating segment groups</title>
-            <itemizedlist mark="bullet">
-                <listitem>
-                    <para>It is not possible for two groups to share the same segments.</para>
-                </listitem>
-                <listitem>
-                    <para>Two instances of the same group cannot have different modes <literal>(Sensor mode).</literal></para>
-                </listitem>
-                <listitem>
-                    <para>IPS/IDS sensors: they can only hang from them their own groups and bindings.</para>
-                </listitem>
-                <listitem>
-                    <para>Groups and links can be moved and make then domain dependent. However, these can only be returned to the IPS sensor they belonged to before being moved.</para>
-                </listitem>
-            </itemizedlist>
-        </section>
-        <section>
-            <title>Add/Edit Segment Group</title>
-            <para>To add a new group, simply select the option <literal>+Add Group.</literal></para>
-            <para>To edit an existing group, click on the "Edit" icon.</para>
-            <para>In both cases, the user will access the configuration interface at the group level. In it you can modify the following information:</para>
-            <itemizedlist mark="bullet">
-                <listitem>
-                    <para><emphasis role="bold">Name:</emphasis> edit group name </para>
-                </listitem>
-                <listitem>
-                    <para><emphasis role="bold">Description:</emphasis> add a description to the segment group.</para>
-                </listitem>
-                <listitem>
-                    <para><emphasis role="bold">IPS/IDS Settings:</emphasis> configuring Snort parameters at the group level.</para>
-                </listitem>
-                <listitem>
-                    <para><emphasis role="bold">IP Variables:</emphasis> list of values ​​for the Snort IP variables at the group level. 
-            Some Snort variables must be modified (edited) to suit the user's network infrastructure so that Snort can recognize them.
-    Those that are inherited from a higher level will appear with a check in the <literal>Inherited</literal> box.</para>
-                </listitem>
-                <listitem>
-                    <para><emphasis role="bold">Port Variables:</emphasis> This section shows the values ​​for Snort ports variables at the group level.
-    The values ​​of these variables can also be edited in exceptional cases where non-conventional ports have been defined.
-            In this way, Snort will be able to recognize these variables. Those that are inherited from a higher level will appear marked as <literal> Inherited.</literal></para>
-                </listitem>
-                <listitem>
-                    <para><emphasis role="bold">Bindings:</emphasis> bindings are partitions of traffic across networks or VLANs. They act as "children" of the group at the level of inheritance and application of policies. 
-                To add a new binding click on <literal>+Add binding</literal> and enter the name.</para>
-                </listitem>
-            </itemizedlist>
-            <note>
-                <title>Note</title>
-                <para>Remember that the segment group will display the settings it has inherited from the sensor. This is the one that will be shown by default in the editing screen at the group level.</para>
-            </note>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img059.png"/>
-                </imageobject>
-                <caption>
-                    <para>Add/edit segment group</para>
-                </caption>
-            </mediaobject>
-                <para><emphasis role="bold">Delete a segment group</emphasis></para>
-                <para>A group can be deleted at any time using the "Delete" icon. The system will display a confirmation message.</para>
-            <important>
-                <title>Important</title>
-                <para>In case that a group had a series of policies assigned, when the group is deleted, these will no longer be applied to the segments that belonged to the group.
-    The segments will be free for integration into another group. </para>
-            </important>
-        </section>
-        <section>
-            <title>Delete a segment group</title>
-            <para>A group can be deleted at any time using the "Delete" icon. The system will display a confirmation message.</para>
+        
+            <section>
+                <title>Conditions for creating segment groups</title>
+                <itemizedlist mark="bullet">
+                    <listitem>
+                        <para>It is not possible for two groups to share the same segments.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Two instances of the same group cannot have different modes <literal>(Sensor mode).</literal></para>
+                    </listitem>
+                    <listitem>
+                        <para>IPS/IDS sensors: they can only hang from them their own groups and bindings.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Groups and links can be moved and make then domain dependent. However, these can only be returned to the IPS sensor they belonged to before being moved.</para>
+                    </listitem>
+                </itemizedlist>
+            </section>
+            <section>
+                <title>Add/Edit Segment Group</title>
+                <para>To add a new group, simply select the option <literal>+Add Group.</literal></para>
+                <para>To edit an existing group, click on the "Edit" icon.</para>
+                <para>In both cases, the user will access the configuration interface at the group level. In it you can modify the following information:</para>
+                <itemizedlist mark="bullet">
+                    <listitem>
+                        <para><emphasis role="bold">Name:</emphasis> edit group name </para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Description:</emphasis> add a description to the segment group.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">IPS/IDS Settings:</emphasis> configuring Snort parameters at the group level.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">IP Variables:</emphasis> list of values ​​for the Snort IP variables at the group level. 
+                Some Snort variables must be modified (edited) to suit the user's network infrastructure so that Snort can recognize them.
+        Those that are inherited from a higher level will appear with a check in the <literal>Inherited</literal> box.</para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Port Variables:</emphasis> This section shows the values ​​for Snort ports variables at the group level.
+        The values ​​of these variables can also be edited in exceptional cases where non-conventional ports have been defined.
+                In this way, Snort will be able to recognize these variables. Those that are inherited from a higher level will appear marked as <literal> Inherited.</literal></para>
+                    </listitem>
+                    <listitem>
+                        <para><emphasis role="bold">Bindings:</emphasis> bindings are partitions of traffic across networks or VLANs. They act as "children" of the group at the level of inheritance and application of policies. 
+                    To add a new binding click on <literal>+Add binding</literal> and enter the name.</para>
+                    </listitem>
+                </itemizedlist>
+                <note>
+                    <title>Note</title>
+                    <para>Remember that the segment group will display the settings it has inherited from the sensor. This is the one that will be shown by default in the editing screen at the group level.</para>
+                </note>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img059.png"/>
+                    </imageobject>
+                    <caption>
+                        <para>Add/edit segment group</para>
+                    </caption>
+                </mediaobject>
+                    <para><emphasis role="bold">Delete a segment group</emphasis></para>
+                    <para>A group can be deleted at any time using the "Delete" icon. The system will display a confirmation message.</para>
                 <important>
-                <title>Important</title>
-                <para>In case that a group had a series of policies assigned, when the group is deleted, these will no longer be applied to the segments that belonged to the group.
-    The segments will be free for integration into another group.</para>
-            </important>
-        </section>
-        <section>
-            <title>Bindings</title>
-                <para><emphasis role="bold">Add/edit binding configuration</emphasis></para>
-                <para>There are two ways to add or edit a binding:</para>
-                <orderedlist numeration="arabic">
-                <listitem>
-                    <para>IPS/IDS sensor configuration view: Groups -> Edit icon -> Bindings-> <literal>+ Add binding</literal>/Edit icon</para>
-                </listitem>
-                <listitem>
-                    <para>IPS/IDS sensor configuration view: <literal>+ Add Group</literal> -> Bindings -> <literal>+ Add binding</literal>/Edit icon</para>
-                </listitem>
-            </orderedlist>
-            <para>When we add a new binding the system prompts us for a name.</para>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img060.png"/>
-                </imageobject>
-                <caption>
-                    <para>Segments groups -> Bindings</para>
-                </caption>
-            </mediaobject>
-            <note>
-                <title>Note</title>
-                <para>For a binding to be taken into account, at least one Vlan must be assigned to it.</para>
-            </note>
-            <mediaobject>
-                <imageobject>
-                    <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img061.png"/>
-                </imageobject>
-                <caption>
-                    <para>Edit binding configuration</para>
-                </caption>
-            </mediaobject>
-            <para>The editing fields for the binding level configuration are the following:</para>
-            <itemizedlist>
-                <listitem>
-                    <para>General: Name and description.</para>
-                </listitem>
-                <listitem>
-                    <para>IPS/IDS Settings</para>
-                </listitem>
-                <listitem>
-                    <para>IP Variables</para>
-                </listitem>
-                <listitem>
-                    <para>Port Variables</para>
-                </listitem>
-            </itemizedlist>
-            <para>To ensure that modifications made to an existing binding will be applied correctly, click on <literal>Update</literal></para>
-            <warning>
-                <title>Warning</title>
-                <para>If the IPS/IDS Settings, IP Variables and Port Variables fields are not modified, the binding will inherit the configuration of the group of segments on which it depends.</para>
-            </warning>
+                    <title>Important</title>
+                    <para>In case that a group had a series of policies assigned, when the group is deleted, these will no longer be applied to the segments that belonged to the group.
+        The segments will be free for integration into another group. </para>
+                </important>
+            </section>
+            <section>
+                <title>Delete a segment group</title>
+                <para>A group can be deleted at any time using the "Delete" icon. The system will display a confirmation message.</para>
+                    <important>
+                    <title>Important</title>
+                    <para>In case that a group had a series of policies assigned, when the group is deleted, these will no longer be applied to the segments that belonged to the group.
+        The segments will be free for integration into another group.</para>
+                </important>
+            </section>
+            <section>
+                <title>Bindings</title>
+                    <para><emphasis role="bold">Add/edit binding configuration</emphasis></para>
+                    <para>There are two ways to add or edit a binding:</para>
+                    <orderedlist numeration="arabic">
+                    <listitem>
+                        <para>IPS/IDS sensor configuration view: Groups -> Edit icon -> Bindings-> <literal>+ Add binding</literal>/Edit icon</para>
+                    </listitem>
+                    <listitem>
+                        <para>IPS/IDS sensor configuration view: <literal>+ Add Group</literal> -> Bindings -> <literal>+ Add binding</literal>/Edit icon</para>
+                    </listitem>
+                </orderedlist>
+                <para>When we add a new binding the system prompts us for a name.</para>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img060.png"/>
+                    </imageobject>
+                    <caption>
+                        <para>Segments groups -> Bindings</para>
+                    </caption>
+                </mediaobject>
+                <note>
+                    <title>Note</title>
+                    <para>For a binding to be taken into account, at least one Vlan must be assigned to it.</para>
+                </note>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata scalefit="1" align="center" width="450" fileref="images/ch03_img061.png"/>
+                    </imageobject>
+                    <caption>
+                        <para>Edit binding configuration</para>
+                    </caption>
+                </mediaobject>
+                <para>The editing fields for the binding level configuration are the following:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>General: Name and description.</para>
+                    </listitem>
+                    <listitem>
+                        <para>IPS/IDS Settings</para>
+                    </listitem>
+                    <listitem>
+                        <para>IP Variables</para>
+                    </listitem>
+                    <listitem>
+                        <para>Port Variables</para>
+                    </listitem>
+                </itemizedlist>
+                <para>To ensure that modifications made to an existing binding will be applied correctly, click on <literal>Update</literal></para>
+                <warning>
+                    <title>Warning</title>
+                    <para>If the IPS/IDS Settings, IP Variables and Port Variables fields are not modified, the binding will inherit the configuration of the group of segments on which it depends.</para>
+                </warning>
+            </section>
         </section>
     </section>
 	<section>
