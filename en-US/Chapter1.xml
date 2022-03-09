@@ -10,10 +10,10 @@
 	<title>Installing the redBorder Enterprise Edition IPS</title>
     <section>
 		<title>What is an IDS?</title>
-		<para><emphasis role="bold">IDS</emphasis> is an Intrusion Detection System to protect one or more organization network.</para> 
+		<para><emphasis role="bold">IDS</emphasis> is an Intrusion Detection System to protect one or more organization networks.</para> 
 		<para>It is a specific software that runs in the user space and analyze network traffic (using a mirror port or SPAN) in one system interface or between two interfaces joined as a bridge (software switch).</para>
 		<para>The traffic is analyzed looking for anomalies, specific signatures or suspicious behavior.</para> 
-		<para>The goal of an IDS is <emphasis role="bold">to dectect intrusions and create alerts without interfering with the organization's traffic.</emphasis></para>
+		<para>The goal of an IDS is <emphasis role="bold">to detect intrusions and create alerts without interfering with the organization's traffic.</emphasis></para>
     </section>
     <section>
 		<title>What is an IPS?</title>
@@ -139,8 +139,8 @@
     </section>
 	<section>
         <title>Network configuration</title>
-        <para>IDS/IPS sensors need to comunicate with the el Manager, to make this possible it is necessary to make the network configuration. Select option <literal>2) Network Configuration</literal> from the redborder configuration menu.</para>
-        <para>Until this setting is not made properly, it will not be possible to register the sensor in the Manager..</para>
+        <para>IDS/IPS sensors need to comunicate with the Manager, to make this possible it is necessary to make the network configuration. Select option <literal>2) Network Configuration</literal> from the redborder configuration menu.</para>
+        <para>Until this setting is not made properly, it will not be possible to register the sensor in the Manager.</para>
         <para>These are the steps you need to follow to configure the network of your sensor:</para>
         <orderedlist numeration="arabic">
             <listitem>
@@ -163,7 +163,7 @@
     </section>
 	<section>
 		<title>Interface assignment and bonding creation</title>
-		<para>Select <literal>Network Configuration</literal> typing <keycap>2</keycap> and press <keycap>Enter.</keycap></para>
+		<para>Select <literal>Network Configuration</literal> typing <keycap>2</keycap> and press <keycap>Enter</keycap>.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img016.png"/>
@@ -172,7 +172,7 @@
 			<para>Automatic assignment of segments with bypass</para>
 		</caption>
 		</mediaobject>
-		<para>In case the system recognizes interfaces with <emphasis>bypass</emphasis>, these will be automatically assigned to the segments..</para>
+		<para>In case the system recognizes interfaces with <emphasis>bypass</emphasis>, these will be automatically assigned to the segments.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img017.png"/>
@@ -216,7 +216,7 @@
 			<para>Select option <keycap>n</keycap> that appears in the submenu on the right side of the screen.</para>
 			<para>Once you have reviewed the ports that are available, select the one that you want to assign to bonding, as it appears in the lower margin of the previous screen.</para>
 			<para>Enter the port number on the line <literal>Insert bonding first port [0]:</literal></para>
-			<para>The number in brackets <literal>[]</literal> it is the one that defines the system by default. To select this number press <keycap>Enter.</keycap></para>
+			<para>The number in brackets <literal>[]</literal> it is the one that defines the system by default. To select this number press <keycap>Enter</keycap>.</para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img019.png"/>
@@ -255,7 +255,7 @@
 		</section>
 		<section>
 			<title>Bonding network configuration</title>
-			<para>Once you have assigned the second port to the new bond (bond0), the system will ask you to enter the following data:</para>
+			<para>Once you have assigned the second port to the new bonding (bond0), the system will ask you to enter the following data:</para>
 			<itemizedlist mark="bullet">
 				<listitem>
 					<para>IP Address</para>
@@ -281,7 +281,7 @@
 				<para>Manually add a route to the bonding</para>
 			</caption>
 			</mediaobject>
-			<para>Once you have finished this process, you will see a message advising you that the Bonding has been successfully created: <literal>Bonding 0 created successfully.</literal></para>
+			<para>Once you have finished this process, you will see a message advising you that the bonding has been successfully created: <literal>Bonding 0 created successfully.</literal></para>
 			<mediaobject>
 				<imageobject>
 					<imagedata scalefit="1" align="center" width="450" fileref="images/ch01_img022.png"/>
@@ -293,7 +293,7 @@
 			<para>Before applying changes and finishing the bonding creation process, the system will show you a table that shows the newly created bonding (bond0) together with the ports that have been assigned to it, the assigned IP and Mask and the route.</para>	
 			<para><emphasis role="bold">Apply changes</emphasis></para>
 			<para>To save the settings select option <keycap>a</keycap>.</para>
-			<para>You can delete the created bond(s) at any time by selecting the option <literal>delete bonding</literal> pressing the key <keycap>d</keycap>.</para>
+			<para>You can delete the created bonding(s) at any time by selecting the option <literal>delete bonding</literal> pressing the key <keycap>d</keycap>.</para>
 			<para>To return to the main network configuration menu, select the option <literal>quit</literal> pressing <keycap>q</keycap>.</para>
 		</section>
 	</section>
@@ -349,13 +349,13 @@
 				<para>Assignment of bypass interfaces to segments (optional).</para>
 			</listitem>
 			<listitem>
-				<para>Creation a segmenet: (max 16 segments).</para>
+				<para>Create a segment: (max 16 segments).</para>
 			</listitem>
 			<listitem>
 				<para>Selecting and assigning ports to the segment</para>
 			</listitem>
 		</orderedlist>
-		<para> In order to select a port, a list with very valuable and detailed information will be displayed, which will help the administrator to decide on which ports the created segments will use.</para>
+		<para> In order to select a port, a list with very valuable and detailed information will be displayed, which will help the administrator to decide which ports the created segment will use.</para>
     
 		<section>
 			<title>Bypass interfaces selection</title>
@@ -392,7 +392,7 @@
 			</note>
 		</section>
 		<section>
-			<title>Add a second port to the segmentt</title>
+			<title>Add a second port to the segment</title>
 			<para>Once you have assigned the first port to the segment, the system will ask you to assign a second port: <literal>Assign second port to the segment (Y/n):</literal></para>
 			<para>The default option is displayed in upper case.</para>
 			<para>Remember that if you want to assign a new port you only have to press the key <keycap>Enter</keycap>.</para>

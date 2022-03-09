@@ -151,7 +151,7 @@
                     <para>Sensor registration successful</para>
                 </caption>
             </mediaobject>
-            <para> To exit the sensor registration wizard, select option <literal>quit</literal> pressing <keycap>q.</keycap></para>				
+            <para> To exit the sensor registration wizard, select option <literal>quit</literal> pressing <keycap>q</keycap>.</para>				
         </section>
     </section>
 </chapter>		

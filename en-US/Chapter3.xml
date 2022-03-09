@@ -120,7 +120,7 @@
                     <para><literal>Options-> Recreate Private Key</literal></para>
                     <para>This option regenerates the synchronization private key of the IPS sensor with the Manager. If you have Administrator role in redborder,
     You will also find this option in the user editing interface in <literal>Tools -> Users</literal>.</para>
-                    <para>Once said restoration has been confirmed, the user must enter the text that is shown in the modal window in the IPS following the following path:: 
+                    <para>Once said restoration has been confirmed, the user must enter the text that is shown in the modal window in the IPS in the following path:: 
                     <computeroutput>/etc/chef/client.pem</computeroutput></para>
                 </listitem>
             </itemizedlist>
@@ -134,7 +134,7 @@
                     <imagedata scalefit="1" align="center" width="150" fileref="images/ch03_img040.png"/>
                 </imageobject>
                 <caption>
-                    <para>Submenu sensores IPS/IDS options: Stop Auto-apply y Recreate Private Key</para>
+                    <para>Submenu sensores IPS/IDS options: Stop Auto-apply and Recreate Private Key</para>
                 </caption>
             </mediaobject>
         </section>	
@@ -468,8 +468,8 @@
     allows the formation of groups of independent segments and bindings.</para>
             <note>
                 <title>Note</title>
-                <para><emphasis role="bold">The inheritance system is established from the higher levels and will apply to the lower levels that hang from it.</emphasis></para>
-                <para>Configuration parameters and policies of higher levels affect those "children" that hang or depend on them. In case the configuration of said children is not edited,
+                <para><emphasis role="bold">The inheritance system is established from the higher levels and will apply to the lower levels that are derived from it.</emphasis></para>
+                <para>Configuration parameters and policies of higher levels affect those "children" that are derived or depend on them. In case the configuration of said children is not edited,
     the system will assign by default the policies, modes and configurations assigned to the "parent" level.</para> 	
             </note>
             <mediaobject>
@@ -510,10 +510,10 @@
                         <para>Two instances of the same group cannot have different modes <literal>(Sensor mode).</literal></para>
                     </listitem>
                     <listitem>
-                        <para>IPS/IDS sensors: they can only hang from them their own groups and bindings.</para>
+                        <para>IPS/IDS sensors: they can only be derived from their own groups and bindings.</para>
                     </listitem>
                     <listitem>
-                        <para>Groups and links can be moved and make then domain dependent. However, these can only be returned to the IPS sensor they belonged to before being moved.</para>
+                        <para>Groups and links can be moved and make them domain dependent. However, these can only be returned to the IPS sensor they belonged to before being moved.</para>
                     </listitem>
                 </itemizedlist>
             </section>
@@ -663,9 +663,9 @@
 		</mediaobject>	
 		<note>
 			<title>Note</title>
-			<para>The inheritance system establishes that the configuration of higher levels affects that of those "children" that hang or depend on them. In case the configuration of said children is not edited,
+			<para>The inheritance system establishes that the configuration of higher levels affects that of those "children" that are derived or depend on them. In case the configuration of said children is not edited,
 the system will assign by default the policies, modes and configurations assigned to the "parent" level.
-			<emphasis role="bold">The inheritance system is therefore established from the higher levels and will apply to the lower levels that hang from it.</emphasis></para>
+			<emphasis role="bold">The inheritance system is therefore established from the higher levels and will apply to the lower levels that are derived from it.</emphasis></para>
 		</note>
 		<para><emphasis role="bold">General Settings</emphasis></para>
 		<para>In <literal>Tools</literal> section we found the option <literal>General Settings</literal> from which the user can establish the configuration of the general parameters of the Manager.</para>
