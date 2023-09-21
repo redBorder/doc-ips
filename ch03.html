@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 3. Editing and configuring IPS/IDS sensors from the web application</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 3.2.0" /><meta name="package" content="redBorder_IPS-User_Guide-3.1-en-US-0.1-0" /><link rel="home" href="index.html" title="User Guide" /><link rel="up" href="index.html" title="User Guide" /><link rel="prev" href="ch02.html" title="Chapter 2. Registering the IPS/IDS sensor" /><link rel="next" href="ch03s02.html" title="3.2. Inherit policies" /></head><body><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img alt="Product Site" src="Common_Content/images//image_left.png" /></a><a class="right" href="https://fedorahosted.org/publican"><img alt="Documentation Site" src="Common_Content/images//image_right.png" /></a></p><ul class="docnav top"><li class="previous"><a accesskey="p" href="ch02.html"><strong>Prev</strong></a></li><li class="home">User Guide</li><li class="next"><a accesskey="n" href="ch03s02.html"><strong>Next</strong></a></li></ul><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="idm140240650626608"></a>Chapter 3. Editing and configuring IPS/IDS sensors from the web application</h1></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="ch03.html#idm140240665206144">3.1. IPS/IDS sensors configuration</a></span></dt><dd><dl><dt><span class="section"><a href="ch03.html#idm140240680735120">3.1.1. Edit IPS/IDS settings overview</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240666574464">3.1.2. IPS/IDS Settings</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240662207168">3.1.3. Servers</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240662197600">3.1.4. Trap Servers</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240662185632">3.1.5. Segments</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240662174736">3.1.6. Network routes</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240662164384">3.1.7. Location</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240656420416">3.1.8. IP Variables</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240656395392">3.1.9. Port variables</a></span></dt><dt><span class="section"><a href="ch03.html#idm140240656370880">3.1.10. Groups</a></span></dt></dl></dd><dt><span class="section"><a href="ch03s02.html">3.2. Inherit policies</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm140240665206144"></a>3.1. IPS/IDS sensors configuration</h2></div></div></div><div class="para">
+			To configure the IPS/IDS sensors, it is necessary to access the redborder web platform by inserting the management IP assigned to the Manager in the address bar of your browser.
+		</div><div class="para">
+			
+<pre class="screen">https://IP-manager-address</pre>
+		</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+				It is possible to log in to the platform using the default account: <span class="bold bold"><strong>admin or admin@redborder.com</strong></span> with the password used during the Manager installation process.
+			</div></div></div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+				The management web will not work if you try to access it through an unencrypted web.
+			</div></div></div><div class="para">
+			There are three ways to access the edition of the IPS/IDS sensors for the configuration of their operating parameters:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					<span class="bold bold"><strong>Tree view:</strong></span> in the tree view, the user can see the IPS/IDS sensors that have been created, accompanied by an identification icon. Click on the sensor name or press the <code class="literal">"Edit"</code> button to access to the sensor configuration view
+				</div><div class="mediaobject" align="center"><img src="images/ch03_img037.png" align="middle" width="450" /><div class="caption"><div class="para">
+						Tree view: edit IPS/IDS sensor
+					</div></div></div></li><li class="listitem"><div class="para">
+					<span class="bold bold"><strong>Access Points view:</strong></span> the Access Points view show a list of APs defined on the network. Click on an Access Point to access the interface configuration for general sensor parameters.
+				</div><div class="mediaobject" align="center"><img src="images/ch03_img038.png" align="middle" width="450" /><div class="caption"><div class="para">
+						Access Points view: edit IPS/IDS sensor
+					</div></div></div></li><li class="listitem"><div class="para">
+					<span class="bold bold"><strong>IPS specific view:</strong></span> on the <code class="literal">View</code> there are specific views for each type of sensor. Select <code class="literal">IPS sensors</code> to access the alphabetical list of IPS sensors. Click the "Edit" icon.
+				</div><div class="mediaobject" align="center"><img src="images/ch03_img039.png" align="middle" width="450" /><div class="caption"><div class="para">
+						IPS Sensors view: IPS/IDS
+					</div></div></div></li></ul></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240680735120"></a>3.1.1. Edit IPS/IDS settings overview</h3></div></div></div><div class="para">
+				In all the cases described, the user accesses to a basic parameters configuration view.
+			</div><div class="para">
+				The configuration form fields vary depending on whether you are editing a sensor, group of segments or binding. This step is very important since one configuration or another will determine the sensor's operating mode depending on whether it is installed in one scenario or another. These options are defined in the section <span class="bold bold"><strong>IPS/IDS configuration.</strong></span>
+			</div><div class="para">
+				The fields displayed on the IPS sensor configuration form are listed below:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						General: displays general sensor information. The only editable information in this section is the description. <a id="idm140240680730736"></a><a href="#ftn.idm140240680730736" class="footnote"><sup class="footnote">[1]</sup></a>
+					</div></li><li class="listitem"><div class="para">
+						IPS/IDS Settings
+					</div></li><li class="listitem"><div class="para">
+						Servers
+					</div></li><li class="listitem"><div class="para">
+						Trap servers
+					</div></li><li class="listitem"><div class="para">
+						Segments
+					</div></li><li class="listitem"><div class="para">
+						Network routes
+					</div></li><li class="listitem"><div class="para">
+						Location
+					</div></li><li class="listitem"><div class="para">
+						IP Variables
+					</div></li><li class="listitem"><div class="para">
+						Port variables
+					</div></li><li class="listitem"><div class="para">
+						Groups
+					</div></li></ul></div><div class="mediaobject" align="center"><img src="images/ch03_img039.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Editable information for IDS/IPS sensor configuration
+				</div></div></div><div class="para">
+				In the upper right corner of the screen we find the following options:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						<code class="literal">Stop Auto-apply</code>
+					</div><div class="para">
+						This button prevents Chef from automatically applying the changes (it refreshes and applies every 5 minutes).
+					</div><div class="para">
+						The system will open a confirmation window to make sure that this is the action the user wants to perform.
+					</div></li><li class="listitem"><div class="para">
+						<code class="literal">Options-&gt; Recreate Private Key</code>
+					</div><div class="para">
+						This option regenerates the synchronization private key of the IPS sensor with the Manager. If you have Administrator role in redborder, You will also find this option in the user editing interface in <code class="literal">Tools -&gt; Users</code>.
+					</div><div class="para">
+						Once said restoration has been confirmed, the user must enter the text that is shown in the modal window in the IPS in the following path:: <code class="computeroutput">/etc/chef/client.pem</code>
+					</div></li></ul></div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+					<span class="bold bold"><strong>The action of restoring the private key is very sensitive since it can leave the sensor without communication with the Manager.</strong></span> Therefore, the system opens a confirmation window before performing any action. Make sure you are sure you want to restore the security key before confirming it.
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img040.png" align="middle" width="150" /><div class="caption"><div class="para">
+					Submenu sensores IPS/IDS options: Stop Auto-apply and Recreate Private Key
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240666574464"></a>3.1.2. IPS/IDS Settings</h3></div></div></div><div class="para">
+				In this section we find the options available to configure the IPS/IDS sensors and the behavior of Snort and PF_RING.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img041.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Editable fields for IPS/IDS (IPS Settings)
+				</div></div></div><div class="para">
+				<code class="literal">Sensor mode</code>
+			</div><div class="para">
+				<code class="literal">Default sensor mode</code>: in this box will appear the mode that has been inherited from higher levels. In this case, the word INHERITED will appear followed, in parentheses, by the way it has been inherited.
+			</div><div class="para">
+				In this field, the user can choose between 4 different options:
+			</div><div class="orderedlist"><ol><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>IDS forwarding:</strong></span> traffic is immediately forwarded by the sensor; then a copy of it is analyzed. In practice, it produces the same effect as having a TAP before the sensor.
+					</div></li><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>IDS span:</strong></span> only the traffic is analyzed. No forward is made.
+					</div></li><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>IPS test mode:</strong></span> the traffic is analyzed and subsequently forwarded. This mode is recommended for simulations of blocking attacker traffic.
+					</div></li><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>IPS:</strong></span> this is the most common option in production environments. Snort analyzes the traffic and passes or blocks the traffic depending on the actions set on the rules included in the sensor signature policy.
+					</div></li></ol></div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+					The sensor must be configured in <span class="bold bold"><strong>IPS Test or IPS mode</strong></span> for the basic scenario of installing redborder IPS.
+				</div></div></div><div class="para">
+				Next, the user can edit a series of parameters related to the behavior of PF_RING and Snort:
+			</div><div class="para">
+				<code class="literal">PF_RING Watermark</code>
+			</div><div class="para">
+				Indicates the minimum number of incoming packets for the poll function.
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						<span class="emphasis"><em>Low watermark value (1):</em></span> reduces the latency of the poll function, decreases the throughtput, but may increase the number of calls to the poll function.
+					</div></li><li class="listitem"><div class="para">
+						<span class="emphasis"><em>High watermark value</em></span> (should never exceed 50% of the ring size or else the PF_RING kernel module will increase this value): reduce the number of poll calls, but slightly increases packet latency.
+					</div></li></ul></div><div class="para">
+				<code class="literal">PF_RING Clustermode</code>
+			</div><div class="para">
+				Split incoming traffic into multiple rings. Especially suitable for <span class="bold bold"><strong> distributing the load</strong></span> by allowing the same interface to be read from several Snort programs.
+			</div><div class="para">
+				Indicates the number of parameters used to determine the hashing and balancing of the traffic between the different Snort processes. Depending on the number of elements that are added to the tuple, the traffic will be distributed in a different way:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						2 tuple flow: Source IP+Destination IP
+					</div></li><li class="listitem"><div class="para">
+						4 tuple flow: Source IP:Port_src+Destination IP:Port_dst
+					</div></li><li class="listitem"><div class="para">
+						5 tuple flow: Source IP:Port_src+Destination IP:Port_dst+protocol
+					</div></li><li class="listitem"><div class="para">
+						6 tuple flow: Source IP:Port_src+Destination IP:Port_dst+protocol+Vlan
+					</div></li></ul></div><div class="para">
+				<code class="literal">Bypass controlled by Snort</code>
+			</div><div class="para">
+				When the machine starts Snort can automatically take control of the bypasses. This action will allow the system to switch off the bypass after a boot process.
+			</div><div class="para">
+				<code class="literal">Threshold Count</code>
+			</div><div class="para">
+				Maximum number of occurrences in a given time range for an event to be sent.
+			</div><div class="para">
+				<code class="literal">Threshold Seconds</code>
+			</div><div class="para">
+				Minimum time (in seconds) that has to pass for an event to be sent.
+			</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					In scenarios where there is an overload of traffic, it is possible make a configuration that allows connectivity over packet analysis.
+				</div><div class="para">
+					The options of <code class="literal">Best effort Configuration</code> and <code class="literal">Software Bypass Configuration</code> are used to prioritize forwarding information over analyzing it.
+				</div></div></div><div class="para">
+				<code class="literal">Best effort Configuration</code>
+			</div><div class="para">
+				This setting only applies in <span class="bold bold"><strong>IDS</strong></span> mode.
+			</div><div class="para">
+				By enabling this option, traffic is copied to an internal work queue and then forwarded. Only if there are no more packets to be forward, the packets in the internal queue will be processed. If the internal queue is full, the packets will not be analyzed. This increases the reliability of the bypass, but decreases the performance of the analysis.
+			</div><div class="para">
+				<code class="literal">Software Bypass Configuration</code>
+			</div><div class="para">
+				This setting only applies in <span class="bold bold"><strong>IPS</strong></span> mode.
+			</div><div class="para">
+				The activation of this option implies that, if the occupation of the interface ring is high, IPS will forward unanalyzed packets until occupancy falls below some other predetermined value.
+			</div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+					IPS bypass configuration is done at the software level. To determine the configuration of the bypasses at the hardware level, refer to the section <code class="literal">Segments.</code>
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240662207168"></a>3.1.3. Servers</h3></div></div></div><div class="para">
+				In this section the user can define the configuration of the Proxy and Syslog servers.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img042.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Proxy and Syslog servers configuration
+				</div></div></div><div class="para">
+				This section will show all its fields with the inherited configuration by the sensor. The user will be able to edit the following information:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Syslog Servers
+					</div></li><li class="listitem"><div class="para">
+						Syslog protocol: UDP/TCP
+					</div></li><li class="listitem"><div class="para">
+						syslog mode: Basic/Extended
+					</div></li><li class="listitem"><div class="para">
+						Enable proxy: Yes/No
+					</div></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240662197600"></a>3.1.4. Trap Servers</h3></div></div></div><div class="para">
+				In this section, the SNMP <code class="literal">Trap Servers</code> configuration is made.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img043.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Trap Servers list
+				</div></div></div><div class="para">
+				<span class="bold bold"><strong>Add Trap Server:</strong></span> It is possible to add a new <code class="literal">Trap Server</code> clicking on <code class="literal">+Add.</code> Next, enter the IP and the SNMP Community to which it belongs. <code class="literal">Update</code> to save the changes made.
+			</div><div class="para">
+				<span class="bold bold"><strong>Delete Trap Server:</strong></span> Click on the "Delete" icon to discard the selected Trap Server.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img044.png" align="middle" width="350" /><div class="caption"><div class="para">
+					Add new Trap Server
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240662185632"></a>3.1.5. Segments</h3></div></div></div><div class="para">
+				This section shows a list with the segments that have been created during the sensor registration process in the Manager. The following information is displayed:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						Segment
+					</div></li><li class="listitem"><div class="para">
+						Interfaces
+					</div></li><li class="listitem"><div class="para">
+						Bypass: activate or deactivate the bypass function.
+					</div></li><li class="listitem"><div class="para">
+						Segment type
+					</div></li><li class="listitem"><div class="para">
+						Speed
+					</div></li></ul></div><div class="mediaobject" align="center"><img src="images/ch03_img045.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Information about the sensor network segments
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240662174736"></a>3.1.6. Network routes</h3></div></div></div><div class="para">
+				Allows the configuration of additional routes that complement the default gateway.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img046.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Static network routes or Network Routes
+				</div></div></div><div class="para">
+				It is possible to add a new route through the tab <code class="literal">+Add Route.</code> Next insert network and network gateway.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img047.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Add new network route: <code class="literal">Network Route</code>
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240662164384"></a>3.1.7. Location</h3></div></div></div><div class="para">
+				Locate the sensor or domain on a world map.
+			</div><div class="para">
+				<span class="bold bold"><strong>Add location:</strong></span> it is possible to add a location from the option <code class="literal">+Add Location</code> and enter the coordinates, or through the menu displayed by the right mouse button.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img048.png" align="middle" width="350" /><div class="caption"><div class="para">
+					Add sensor location: +Add Location
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img049.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Add sensor location: right click menu
+				</div></div></div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+					To be able to display data in the view <code class="literal">Maps</code> it is necessary to add the locations of the sensors in this interface.
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240656420416"></a>3.1.8. IP Variables</h3></div></div></div><div class="para">
+				This section shows the values ​​for the Snort IP variables.
+			</div><div class="para">
+				Some Snort variables must be modified (edited) to suit the user's network infrastructure so that Snort can recognize them. For example, in case that local networks with public IPs have been configured.
+			</div><div class="para">
+				Those IP variables inherited from a higher level will appear with a check in the box <code class="literal"> Inherited.</code>
+			</div><div class="para">
+				<span class="bold bold"><strong>Available actions:</strong></span> export, import, edit and delete IP variables.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img050.png" align="middle" width="350" /><div class="caption"><div class="para">
+					IP variables
+				</div></div></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					For more information about the values ​​of the IP variables see the following link: http://manual.snort.org/node53.html
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img051.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Edit IP Variable values
+				</div></div></div><div class="para">
+				It is possible to Export and import IP variables from the tabs <code class="literal">Export</code> and <code class="literal">Import.</code> The file format used in the import and export must be .csv
+			</div><div class="para">
+				The variable import option offers the possibility to Add variables or replace existing ones.
+			</div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+					In case of selecting the option Import variables -&gt; <code class="literal">Replace variables,</code> the new variables will override the values ​​shown in the list if the variable already existed and was not inherited.
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img052.png" align="middle" width="350" /><div class="caption"><div class="para">
+					Import IP variables
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img053.png" align="middle" width="350" /><div class="caption"><div class="para">
+					Export IP variables
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240656395392"></a>3.1.9. Port variables</h3></div></div></div><div class="para">
+				This section shows the values ​​for the Snort port variables.
+			</div><div class="para">
+				The values ​​of these variables can also be edited in exceptional cases where non-conventional ports have been defined. In this way, Snort will be able to recognize these variables. Those that are inherited from a higher level will have the box <code class="literal"> Inherited</code> activated.
+			</div><div class="para">
+				<span class="bold bold"><strong>Available actions:</strong></span> export, import, edit and delete port variables.
+			</div><div class="mediaobject" align="center"><img src="images/ch03_img054.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Port variables
+				</div></div></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					For more information about the values ​​of the Snort port variables, consult the following link: http://manual.snort.org/node54.html
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img055.png" align="middle" width="350" /><div class="caption"><div class="para">
+					Edit Snort Port Variable Values
+				</div></div></div><div class="para">
+				It is possible to Export and import port variables from the tabs <code class="literal">Export</code> and <code class="literal">Import.</code> The file format used in the import and export must be .csv
+			</div><div class="para">
+				The import variables option offers the possibility to Add variables or replace existing ones.
+			</div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+					In case of selecting the option Import variables-&gt; <code class="literal">Replace variables</code> the new variables will override the values ​​shown in the list in case the variable already existed and this one, was not inherited.
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img056.png" align="middle" width="350" /><div class="caption"><div class="para">
+					Import snort port variables
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img057.png" align="middle" width="350" /><div class="caption"><div class="para">
+					Export snort port variables
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240656370880"></a>3.1.10. Groups</h3></div></div></div><div class="para">
+				<span class="bold bold"><strong>Group:</strong></span> it is a set of instances associated with a specific processor that read from one or more segments in a specific way.
+			</div><div class="para">
+				<span class="bold bold"><strong>Instance:</strong></span> it is an association of a group of segments to a processor or processors. In case we have created more than one instance for the same group, it is necessary to have the same number of bindings configured as instances.
+			</div><div class="para">
+				<span class="bold bold"><strong>Binding</strong></span> it is a partition of the traffic by network or VLAN. It is a "child" of a group of segments.
+			</div><div class="para">
+				The user can assign a policy at three levels: sensor, group of segments or bindings.
+			</div><div class="para">
+				This increases the flexibility associated with the software, since, unlike the previous version in which a policy had to be fully applied for a sensor (regardless of the segments created), allows the formation of groups of independent segments and bindings.
+			</div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					<span class="bold bold"><strong>The inheritance system is established from the higher levels and will apply to the lower levels that are derived from it.</strong></span>
+				</div><div class="para">
+					Configuration parameters and policies of higher levels affect those "children" that are derived or depend on them. In case the configuration of said children is not edited, the system will assign by default the policies, modes and configurations assigned to the "parent" level.
+				</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img058.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Segments groups
+				</div></div></div><div class="para">
+				In this section you can configure the segment groups:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>Name:</strong></span> edit group name
+					</div></li><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>Sensor mode:</strong></span> selection of the mode to be applied at the group level (sensor mode is inherited by default)
+					</div></li><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>Segments:</strong></span> indicates the segment(s) included in the group
+					</div></li><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>CPUs:</strong></span> assignment of the processor(s) from which the group of segments is to be read.
+					</div></li></ul></div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+					When there is more than one group of segments, it is recommended that different processors or CPUs be assigned to each group to distribute the processes and on that way balance the load of each processor.
+				</div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idm140240651062816"></a>3.1.10.1. Conditions for creating segment groups</h4></div></div></div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+							It is not possible for two groups to share the same segments.
+						</div></li><li class="listitem"><div class="para">
+							Two instances of the same group cannot have different modes <code class="literal">(Sensor mode).</code>
+						</div></li><li class="listitem"><div class="para">
+							IPS/IDS sensors: they can only be derived from their own groups and bindings.
+						</div></li><li class="listitem"><div class="para">
+							Groups and links can be moved and make them domain dependent. However, these can only be returned to the IPS sensor they belonged to before being moved.
+						</div></li></ul></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idm140240651056544"></a>3.1.10.2. Add/Edit Segment Group</h4></div></div></div><div class="para">
+					To add a new group, simply select the option <code class="literal">+Add Group.</code>
+				</div><div class="para">
+					To edit an existing group, click on the "Edit" icon.
+				</div><div class="para">
+					In both cases, the user will access the configuration interface at the group level. In it you can modify the following information:
+				</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+							<span class="bold bold"><strong>Name:</strong></span> edit group name
+						</div></li><li class="listitem"><div class="para">
+							<span class="bold bold"><strong>Description:</strong></span> add a description to the segment group.
+						</div></li><li class="listitem"><div class="para">
+							<span class="bold bold"><strong>IPS/IDS Settings:</strong></span> configuring Snort parameters at the group level.
+						</div></li><li class="listitem"><div class="para">
+							<span class="bold bold"><strong>IP Variables:</strong></span> list of values ​​for the Snort IP variables at the group level. Some Snort variables must be modified (edited) to suit the user's network infrastructure so that Snort can recognize them. Those that are inherited from a higher level will appear with a check in the <code class="literal">Inherited</code> box.
+						</div></li><li class="listitem"><div class="para">
+							<span class="bold bold"><strong>Port Variables:</strong></span> This section shows the values ​​for Snort ports variables at the group level. The values ​​of these variables can also be edited in exceptional cases where non-conventional ports have been defined. In this way, Snort will be able to recognize these variables. Those that are inherited from a higher level will appear marked as <code class="literal"> Inherited.</code>
+						</div></li><li class="listitem"><div class="para">
+							<span class="bold bold"><strong>Bindings:</strong></span> bindings are partitions of traffic across networks or VLANs. They act as "children" of the group at the level of inheritance and application of policies. To add a new binding click on <code class="literal">+Add binding</code> and enter the name.
+						</div></li></ul></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+						Remember that the segment group will display the settings it has inherited from the sensor. This is the one that will be shown by default in the editing screen at the group level.
+					</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img059.png" align="middle" width="450" /><div class="caption"><div class="para">
+						Add/edit segment group
+					</div></div></div><div class="para">
+					<span class="bold bold"><strong>Delete a segment group</strong></span>
+				</div><div class="para">
+					A group can be deleted at any time using the "Delete" icon. The system will display a confirmation message.
+				</div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+						In case that a group had a series of policies assigned, when the group is deleted, these will no longer be applied to the segments that belonged to the group. The segments will be free for integration into another group.
+					</div></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idm140240651031248"></a>3.1.10.3. Delete a segment group</h4></div></div></div><div class="para">
+					A group can be deleted at any time using the "Delete" icon. The system will display a confirmation message.
+				</div><div class="important"><div class="admonition_header"><p><strong>Important</strong></p></div><div class="admonition"><div class="para">
+						In case that a group had a series of policies assigned, when the group is deleted, these will no longer be applied to the segments that belonged to the group. The segments will be free for integration into another group.
+					</div></div></div></div><div class="section"><div class="titlepage"><div><div><h4 class="title"><a id="idm140240651028048"></a>3.1.10.4. Bindings</h4></div></div></div><div class="para">
+					<span class="bold bold"><strong>Add/edit binding configuration</strong></span>
+				</div><div class="para">
+					There are two ways to add or edit a binding:
+				</div><div class="orderedlist"><ol class="arabic"><li class="listitem"><div class="para">
+							IPS/IDS sensor configuration view: Groups -&gt; Edit icon -&gt; Bindings-&gt; <code class="literal">+ Add binding</code>/Edit icon
+						</div></li><li class="listitem"><div class="para">
+							IPS/IDS sensor configuration view: <code class="literal">+ Add Group</code> -&gt; Bindings -&gt; <code class="literal">+ Add binding</code>/Edit icon
+						</div></li></ol></div><div class="para">
+					When we add a new binding the system prompts us for a name.
+				</div><div class="mediaobject" align="center"><img src="images/ch03_img060.png" align="middle" width="450" /><div class="caption"><div class="para">
+						Segments groups -&gt; Bindings
+					</div></div></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+						For a binding to be taken into account, at least one Vlan must be assigned to it.
+					</div></div></div><div class="mediaobject" align="center"><img src="images/ch03_img061.png" align="middle" width="450" /><div class="caption"><div class="para">
+						Edit binding configuration
+					</div></div></div><div class="para">
+					The editing fields for the binding level configuration are the following:
+				</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+							General: Name and description.
+						</div></li><li class="listitem"><div class="para">
+							IPS/IDS Settings
+						</div></li><li class="listitem"><div class="para">
+							IP Variables
+						</div></li><li class="listitem"><div class="para">
+							Port Variables
+						</div></li></ul></div><div class="para">
+					To ensure that modifications made to an existing binding will be applied correctly, click on <code class="literal">Update</code>
+				</div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+						If the IPS/IDS Settings, IP Variables and Port Variables fields are not modified, the binding will inherit the configuration of the group of segments on which it depends.
+					</div></div></div></div></div></div><div class="footnotes"><br /><hr /><div id="ftn.idm140240680730736" class="footnote"><div class="para"><a href="#idm140240680730736" class="para"><sup class="para">[1] </sup></a>
+							Both the IP and the name of the sensor have been defined during the process of installing and registering the sensors in the Manager.
+						</div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="ch02.html"><strong>Prev</strong>Chapter 2. Registering the IPS/IDS sensor</a></li><li class="up"><a accesskey="u" href="#"><strong>Up</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Home</strong></a></li><li class="next"><a accesskey="n" href="ch03s02.html"><strong>Next</strong>3.2. Inherit policies</a></li></ul></body></html>

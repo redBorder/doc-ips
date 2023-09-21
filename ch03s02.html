@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>3.2. Inherit policies</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 3.2.0" /><meta name="package" content="redBorder_IPS-User_Guide-3.1-en-US-0.1-0" /><link rel="home" href="index.html" title="User Guide" /><link rel="up" href="ch03.html" title="Chapter 3. Editing and configuring IPS/IDS sensors from the web application" /><link rel="prev" href="ch03.html" title="Chapter 3. Editing and configuring IPS/IDS sensors from the web application" /></head><body><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img alt="Product Site" src="Common_Content/images//image_left.png" /></a><a class="right" href="https://fedorahosted.org/publican"><img alt="Documentation Site" src="Common_Content/images//image_right.png" /></a></p><ul class="docnav top"><li class="previous"><a accesskey="p" href="ch03.html"><strong>Prev</strong></a></li><li class="home">User Guide</li><li class="next"></li></ul><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm140240651004224"></a>3.2. Inherit policies</h2></div></div></div><div class="para">
+			As we have seen before, the organization of network elements created in redborder is hierarchical and therefore establishes dependencies between levels and others.
+		</div><div class="para">
+			These dependencies establish an inheritance system that affects both the configuration and the policies applied at each of the levels (from higher to lower hierarchy):
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Root
+				</div></li><li class="listitem"><div class="para">
+					Domain
+				</div></li><li class="listitem"><div class="para">
+					Sensors
+				</div></li><li class="listitem"><div class="para">
+					Group
+				</div></li><li class="listitem"><div class="para">
+					Binding
+				</div></li></ul></div><div class="mediaobject" align="center"><img src="images/ch03_img062.png" align="middle" width="450" /><div class="caption"><div class="para">
+				Sensors -&gt; Tree: hierarchies and dependencies between levels
+			</div></div></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+				The inheritance system establishes that the configuration of higher levels affects that of those "children" that are derived or depend on them. In case the configuration of said children is not edited, the system will assign by default the policies, modes and configurations assigned to the "parent" level. <span class="bold bold"><strong>The inheritance system is therefore established from the higher levels and will apply to the lower levels that are derived from it.</strong></span>
+			</div></div></div><div class="para">
+			<span class="bold bold"><strong>General Settings</strong></span>
+		</div><div class="para">
+			In <code class="literal">Tools</code> section we found the option <code class="literal">General Settings</code> from which the user can establish the configuration of the general parameters of the Manager.
+		</div><div class="para">
+			This is the highest level of configuration (<span class="bold bold"><strong>root</strong></span> domain) so the properties defined here will be inherited by the rest of the domains and sensors that are below this level.
+		</div><div class="mediaobject" align="center"><img src="images/ch03_img063.png" align="middle" width="450" /><div class="caption"><div class="para">
+				General Settings: General Manager configuration or "root"
+			</div></div></div><div class="para">
+			<span class="bold bold"><strong>Inherited setting: "Inherited"</strong></span>
+		</div><div class="para">
+			When a domain or sensor is created or edited for the first time, we will notice that some parameters are accompanied by the label <span class="bold bold"><strong>"Inherited"</strong></span>, this means that they have inherited the values ​​inherited from the general configuration of the Manager or of the domains or sensors that are above the newly created element. To change this setting, the user will need to override that information.
+		</div><div class="mediaobject" align="center"><img src="images/ch03_img064.png" align="middle" width="450" /><div class="caption"><div class="para">
+				Inherited IPS/IDS sensor configuration
+			</div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="ch03.html"><strong>Prev</strong>Chapter 3. Editing and configuring IPS/IDS sensor...</a></li><li class="up"><a accesskey="u" href="#"><strong>Up</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Home</strong></a></li></ul></body></html>

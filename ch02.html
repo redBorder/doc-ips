@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 2. Registering the IPS/IDS sensor</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 3.2.0" /><meta name="package" content="redBorder_IPS-User_Guide-3.1-en-US-0.1-0" /><link rel="home" href="index.html" title="User Guide" /><link rel="up" href="index.html" title="User Guide" /><link rel="prev" href="ch01s11s04.html" title="1.11.4. Finish the process of creating the segments" /><link rel="next" href="ch03.html" title="Chapter 3. Editing and configuring IPS/IDS sensors from the web application" /></head><body><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img alt="Product Site" src="Common_Content/images//image_left.png" /></a><a class="right" href="https://fedorahosted.org/publican"><img alt="Documentation Site" src="Common_Content/images//image_right.png" /></a></p><ul class="docnav top"><li class="previous"><a accesskey="p" href="ch01s11s04.html"><strong>Prev</strong></a></li><li class="home">User Guide</li><li class="next"><a accesskey="n" href="ch03.html"><strong>Next</strong></a></li></ul><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="idm140240664307120"></a>Chapter 2. Registering the IPS/IDS sensor</h1></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="ch02.html#idm140240650115024">2.1. Registration of the sensor in the Manager</a></span></dt><dd><dl><dt><span class="section"><a href="ch02.html#idm140240649480416">2.1.1. Assign sensor name (Hostname)</a></span></dt><dt><span class="section"><a href="ch02.html#idm140240649019584">2.1.2. Local time configuration</a></span></dt><dt><span class="section"><a href="ch02.html#idm140240681726512">2.1.3. Insert the Master Manager IP</a></span></dt><dt><span class="section"><a href="ch02.html#idm140240663715008">2.1.4. Registration of the sensors in the Manager</a></span></dt></dl></dd></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title"><a id="idm140240650115024"></a>2.1. Registration of the sensor in the Manager</h2></div></div></div><div class="para">
+			To finish the installation process of the IPS/IDS sensor, the last step consist in <span class="bold bold"><strong>Manager sensors registration.</strong></span>
+		</div><div class="para">
+			Until the registration is complete, a message will be displayed indicating that the sensors have not yet been registered in the Manager.
+		</div><div class="mediaobject" align="center"><img src="images/ch02_img030.png" align="middle" width="450" /><div class="caption"><div class="para">
+				Starting sensor registration to the Manager
+			</div></div></div><div class="para">
+			In the sensor registration menu we can find the following options:
+		</div><div class="orderedlist"><ol class="arabic"><li class="listitem"><div class="para">
+					<code class="literal">Hostname [rbsensor]:</code> assign a sensor name.
+				</div></li><li class="listitem"><div class="para">
+					<code class="literal">Set local time:</code> configure local time.
+				</div></li><li class="listitem"><div class="para">
+					<code class="literal">IP adress for rB Master Manager [127.0.0.1]:</code> insert the Manager IP.
+				</div></li><li class="listitem"><div class="para">
+					<code class="literal">Register rB/Manager:</code> register the sensor into the Manager.
+				</div></li><li class="listitem"><div class="para">
+					<code class="literal">Register to a redborder cloud:</code> register the sensor into redborder live platform.
+				</div></li></ol></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240649480416"></a>2.1.1. Assign sensor name (Hostname)</h3></div></div></div><div class="para">
+				Select the option <code class="literal">Hostname [rbsensor]</code> from the registration menu by pressing <span class="keycap"><strong>1</strong></span>.
+			</div><div class="para">
+				Next, on the line <code class="literal">Insert Hostname [rbsensor]:</code> type the name you want to give to the sensor. From now on, this is the name that will be displayed on the web when you access to the list of IPS sensors.
+			</div><div class="mediaobject" align="center"><img src="images/ch02_img031.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Assign a sensor name
+				</div></div></div><div class="note"><div class="admonition_header"><p><strong>Note</strong></p></div><div class="admonition"><div class="para">
+					Remember to enter a consistent name for the sensor. Avoid using the name “Sensor”, as this is the generic name used by the Manager and could cause confusion in the long run.
+				</div></div></div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+					The system will ask you to verify that the chosen name is correct, in this case, press <span class="keycap"><strong>Enter</strong></span>
+				</div><div class="para">
+					If you wish to modify it, insert the letter <span class="keycap"><strong>n</strong></span>
+				</div><div class="para">
+					The system will proceed to change the name of the sensor. To continue, and return to the redborder system configuration menu, press any key as indicated <code class="literal">Press a key to continue...</code>
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240649019584"></a>2.1.2. Local time configuration</h3></div></div></div><div class="para">
+				Select option <code class="literal">2) Set local time.</code>
+			</div><div class="para">
+				Insert date and time of your country.
+			</div><div class="para">
+				The system indicates two possible formats for inserting the date and time:
+			</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						<code class="literal">[HH:mm]</code> or <code class="literal">[YYYY/MM/DD]</code>
+					</div></li><li class="listitem"><div class="para">
+						<code class="literal"> [YYYY/MM/DD HH:mm]</code>
+					</div></li></ul></div><div class="para">
+				Press <span class="keycap"><strong>Enter</strong></span> to continue with the registration process.
+			</div><div class="mediaobject" align="center"><img src="images/ch02_img032.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Sensor registration in the Manager: Select local time
+				</div></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240681726512"></a>2.1.3. Insert the Master Manager IP</h3></div></div></div><div class="para">
+				Select option <code class="literal">3) IP adress for rB Master Manager [.*].</code>
+			</div><div class="para">
+				Insert the IP address or domain name of the computer used by the user. The system will perform a series of checks to verify if it is reachable. This process may take a few seconds.
+			</div><div class="para">
+				The system will synchronize the time of the computers and then restart a couple of services in order to finish the time synchronization.
+			</div><div class="para">
+				Congratulations! Your machine is ready to register the sensor in the Manager.
+			</div><div class="mediaobject" align="center"><img src="images/ch02_img033.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Insert Master Manager IP
+				</div></div></div><div class="para">
+				To continue, and return to the redborder system configuration menu, press any key as indicated <code class="literal">Press a key to continue...</code>
+			</div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="idm140240663715008"></a>2.1.4. Registration of the sensors in the Manager</h3></div></div></div><div class="para">
+				This is the last step to configure your redborder IPS/IDS sensor.
+			</div><div class="para">
+				From this moment on, you will be able to work directly from the IPS management application, in whose dashboard you will graphically view all the traffic events captured by the IPS sensors.
+			</div><div class="para">
+				In this application you can create reports, view events or configure the rules of the Manager among other actions.
+			</div><div class="para">
+				<span class="emphasis"><em>Completing the sensor registration process in the Manager</em></span>
+			</div><div class="para">
+				The steps to follow to complete the sensor registration process in the Manager are as follows:
+			</div><div class="orderedlist"><ol class="arabic"><li class="listitem"><div class="para">
+						Indicate if you want to have a debugging output: the system will ask the following question <code class="literal">Would you like to have a debug output?</code> Select default option (No) pressing the key <span class="keycap"><strong>N</strong></span>.
+					</div></li><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>Insert password:</strong></span> indicate the password that has been entered in the basic settings phase for the configuration of the Manager.
+					</div></li><li class="listitem"><div class="para">
+						<span class="bold bold"><strong>Time synchronization (automatic) between the Manager and the sensors: </strong></span> this process may take a few seconds to complete.
+					</div></li></ol></div><div class="mediaobject" align="center"><img src="images/ch02_img034.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Completing the registration of the sensors in the Manager
+				</div></div></div><div class="para">
+				After completing these steps, the system will notify you with a message that the sensor has been successfully registered.
+			</div><div class="para">
+				<code class="literal">Sensor registered succesfully with chef server</code>
+			</div><div class="mediaobject" align="center"><img src="images/ch02_img035.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Sensor registration on the server
+				</div></div></div><div class="warning"><div class="admonition_header"><p><strong>Warning</strong></p></div><div class="admonition"><div class="para">
+					Do not change the sensor name or <span class="emphasis"><em>hostname</em></span> once it has been registered. If you want to make changes, you will need to undo the entire registration process and start over.
+				</div></div></div><div class="para">
+				To continue and return to the redborder system configuration menu, press any key as indicated <code class="literal">Press a key to continue...</code>
+			</div><div class="para">
+				In the sensor registration menu in the redborder Manager you can check that the sensor has been successfully registered:<code class="literal">(Registered).</code>
+			</div><div class="mediaobject" align="center"><img src="images/ch02_img036.png" align="middle" width="450" /><div class="caption"><div class="para">
+					Sensor registration successful
+				</div></div></div><div class="para">
+				To exit the sensor registration wizard, select option <code class="literal">quit</code> pressing <span class="keycap"><strong>q</strong></span>.
+			</div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="ch01s11s04.html"><strong>Prev</strong>1.11.4. Finish the process of creating the segmen...</a></li><li class="up"><a accesskey="u" href="#"><strong>Up</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Home</strong></a></li><li class="next"><a accesskey="n" href="ch03.html"><strong>Next</strong>Chapter 3. Editing and configuring IPS/IDS sensor...</a></li></ul></body></html>
